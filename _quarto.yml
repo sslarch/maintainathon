@@ -1,19 +1,31 @@
 project:
   type: website
+  title: BibVik
+  preview:
+    port: 7777
+    browser: false
 
 website:
   title: "Digital Archaeology Maintainathon"
   site-url: https://sslarch.github.io/maintainathon/
+  repo-url: https://github.com/sslarch/maintainathon
+  bread-crumbs: true
+  page-navigation: false
   favicon: images/sig_ssla_logo.svg
 
   page-footer: 
-    right: "This page is built with ❤️ and [Quarto](https://quarto.org/), with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com) and inspired by [NASA Openscapes](https://openscapes.org/)."
-    left: "Brought to you by the [Scientific Scripting Languages in Archaeology SIG](https://sslarch.github.io/)"
-
+    right: |
+      This page is built with ❤️ and [Quarto](https://quarto.org/), with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com) and inspired by [NASA Openscapes](https://openscapes.org/)\
+      Brought to you by the [Scientific Scripting Languages in Archaeology SIG](https://sslarch.github.io/)
+    left:
+      - text: "CC0"
+        href: https://creativecommons.org/publicdomain/zero/1.0/
   navbar:
-    logo: images/sig_ssla_logo.svg
+    logo: images/sig_ssla_logo_300_dpi.png
     href: https://sslarch.github.io/maintainathon/
     right:
+    - text: "Home"
+      href: index.qmd
     - text: "Resources"
       href: resources.qmd
     - text: "Showcase"
@@ -22,11 +34,11 @@ website:
       href: https://github.com/sslarch/maintainathon
     - icon: mastodon
       href: https://archaeo.social/@CAA_SSLA
+  sidebar: false
 format:
   html:
-    theme: [sandstone, custom.scss]
+    theme: [darkly, custom.scss]
     css: styles.css
     toc: true
     toc-title: Contents
     toc-location: left
-

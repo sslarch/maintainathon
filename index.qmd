@@ -1,7 +1,11 @@
 ---
-title: "maintainathon"
+title: "Digital Archaeology Maintainathon"
+
 ---
 
-This is a Quarto website.
+Let’s clean, document and revisit older code and data, together!
 
-To learn more about Quarto websites visit <https://quarto.org/docs/websites>.
+1. Put in the work
+2. Post about it
+3. Reflect and discuss\
+<div style="text-indent:-1em;"><span style="color:green;"><b>✓</b></span> That’s it!</div>
