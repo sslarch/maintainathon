@@ -1,0 +1,94 @@
+---
+title: |
+  Digital Archaeology Maintainathon\
+  [Some resources to support your work]{.hashtag}
+---
+
+## Add comments to old code or code in progress
+Something about Knuth's literate programming.
+
+## Write a better README
+A README is a file that includes a detailed description of a project directory.
+They typically include a broad overview of what the project does, why it was made, and the rationale behind the way it was implemented.
+They also usually include instructions for how to install, run other otherwise make sense of the code and its components.
+READMEs may also include links to other related resources, recognize the roles of various contributors, update users regarding the status of the project, and indicate the project's overall orientation.
+
+[makeareadme.com](https://www.makeareadme.com/) is a great resource that provides excellent tips for writing clear and helpful readmes.
+They also provide handy templates that you may adapt for your own purposes.
+
+## Archive your code in long-term repository
+Reference Zenodo's GitHub integration.
+Mention Software Heritage.
+Reference the GitHub / Internet Archive uploader tool.
+tDAR?
+
+## Something about assigning version numbers
+List of various versioning schemes: https://nesbitt.io/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html
+
+Some notable schemes:
+
+- [Semantic Versioning](https://semver.org/)
+- [Calendar Versioning (CalVer)](https://calver.org/)
+- [Intended Effort Versioning (EffVer)](https://jacobtomlinson.dev/effver/)
+- [Romantic Versioning (RomVer)](https://romversioning.github.io/romver/)
+- [Alternative Versioning (AltVer)](https://altver.org/)
+- [Sentimental Versioning](https://github.com/dominictarr/sentimental-versioning)
+
+## Document your research group’s coding guidelines
+Develop some solid practices.
+Ensure they are actionable.
+Maybe something like "good enough" practices.
+
+DO NOT assign this task to the most technical person in the room.
+DO make plans to revisit this document one month, six months, etc in the future --- mark it down in your calendar now!
+
+## Add an open license
+Visit [choosealicense.com](https://choosealicense.com/) for detailed information on software licenses.
+
+Note that software licenses are distinct from licenses intended for non-software materials, such as data, media, documentation and fonts.
+choosealicense.com also includes info on non-software licenses: https://choosealicense.com/non-software/
+
+There is also an info page on what happens if you don't choose a license: https://choosealicense.com/no-permission/
+
+The Hippocratic License hosts a tool for creating a custom license including language suited to various parameters which you can mix and match at your own discretion, including explicit allowances and restrictions for various communities of potential use-cases, such as an Fossil Fuel Divestment module, a Law Enforcement module, and a Supply Chain Transparency module: https://firstdonoharm.dev/build/
+
+## Add a citation file to your repo
+Add a cff file, which includes information that can be picked up by a reference manager to generate clean citations: https://citation-file-format.github.io/
+
+## Write some contributor guidelines
+Reference the Mastodon Server Covenant: https://joinmastodon.org/covenant
+
+Reference the Archaeological Ethics Database: https://archaeologicalethics.org/
+
+Ensure that there are mechanisms to follow through on these guidelines; they are meaningless unless they can be backed by action.
+
+## Develop a roadmap or checklist of things to do
+https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development
+
+## Acknowledge contributors
+It's all about community!
+
+Acknowledging contributors coming from under-represented backgrounds may help foster more inclusive developer communities, which is great for enhancing the quality of both communities and codebases.
+
+## Make a video demo of your code in action
+## List your project in a community registry
+- https://open-archaeo.info/
+- https://github.com/SPAAM-community/AncientMetagenomeDir
+
+## Cleanup your working directories
+## Archive abandoned projects
+Acknowledge when it's time to tuck a project away, and mark it as archived.
+This will put a banner on your repo and restrict any new pull requests.
+
+If a project has been picked up by others, or the work continues in another forum, make sure to provide a link!
+
+## Volunteer to review for the Journal of Open Source Software
+## Browse critical research on software development practices
+## Donate to FOSS projects
+While many archaeologists who write code enjoy stable incomes, many others do not.
+In fact, archaeologists who write code tend to be disproportionally of dis-empowered employment status (https://intarch.ac.uk/journal/issue67/13/full-text.html)
+
+## Post about your work
+Make it known that you're making cool stuff, and that anyone can use it!
+People may find even the most casual and thrown-together projects useful, if not in practice then as inspiration for building upon and improving!
+
