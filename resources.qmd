@@ -139,7 +139,61 @@ People may find even the most casual and thrown-together projects useful, if not
 
 ### Something about vibe coding
 
-### Testing across platforms
+### Testing your code! (across platforms...?)
+Testing your code involves writing a lot more code to check whether your code is coded the way it should be coded. It is usually a good idea to write your (unit) tests before you write your code, and really think about: What do I want the outcome of this function or method to be? And then... First test for that outcome and improve your code until your tests don't fail. But often, in the excitement of working on a new project, we forget to test everything... Therefore we thought: Adding more tests is a great thing to do in a maintainathon! We invite you to: 
+
+1. Take one function or method from a script, a package, a software that you produced. 
+2. Think long and hard about what you actually wanted this to do. 
+3. Produce some incoming test data, and some "ideal result" data. 
+4. Write at least one test that will make sure that one aspect of the result is really what you want it to be - and share that with us. 
+
+What do we mean by this? Let's say you developed a revolutionary new function that calculates the mean of some numbers, in R:
+
+``` r
+revolutionary_new_mean <- function(x) {
+  sum <- sum(x)
+  n <- length(x)
+
+  result <- sum / n
+
+  return(result)
+} 
+```
+
+Think about what you want this result to be, and how your function could fail, and then see if it does or not: 
+
+``` r
+test_that("revolutionary_new_mean returns the correct mean for numeric vectors", {
+  # Test with a basic vector of integers
+  # Expected: (17 + 8 + 6 + 9) / 4 = 40 / 4 = 10
+  result <- revolutionary_new_mean(c(17, 8, 6, 9))
+  expect_equal(result, 10)
+  
+  # Test with decimal numbers
+  # Expected: (17.5 + 8.5 + 6.5 + 9.5) / 4 = 42 / 4 = 10.5
+  result <- my_mean(c(17.5, 8.5, 6.5, 9.5))
+  expect_equal(result, 10.5)
+})
+
+test_that("revolutionary_new_mean handles non-numeric vectors", {
+  # Expected: ???
+  result <- revolutionary_new_mean(c("cake", "cheese"))
+  # This is not valid R code. 
+  expect_true(result, ????)
+})
+```
+
+Done! We now wrote two *unit tests* (even though one of them will fail miserably). 
+
+Writing tests helps you save your code from yourself: If you change things later on, you can make sure that you still get the same results. For more complex projects, you will also want to add integration tests that check whether all the parts work together in the way that you want them to. Good tests help you make sure that your script, package, or software is maintainable and functional, and does exactly what you want it to. And: Tests are great documentation! They tell others what you expected from your functions and methods, and help them get into working on your code. 
+
+Here are some useful resources for learning how tests can benefit you, and how to write them: 
+
+- Unit Tests and Integration Tests - [What's the difference?](https://www.geeksforgeeks.org/software-engineering/difference-between-unit-testing-and-integration-testing/)
+- The package [testthat in R](https://testthat.r-lib.org/) and how to [use it in package development](https://r-pkgs.org/testing-basics.html).
+- [Getting Started With Testing in Python](https://realpython.com/python-testing/)
+
+Be sure to also check the resources about Continuous Integration to see how you can automate your tests (and test your code on multiple operating systems)!
 
 ### Using advanced forge features
 
