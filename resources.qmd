@@ -176,5 +176,10 @@ Ensure that there are mechanisms to follow through on these guidelines; they are
 ### Cleanup your working directories
 
 
-### Volunteer to review for the Journal of Open Source Software
+### Volunteer to review software
+You may think, wait, is this something for a maintainathon? We say yes! Software reviews are valuable for people maintaining the software. It may give hints about what to improve and what to keep just as it is, as it works perfectly already. A review also raises awareness for the software, which is great for developers and potential users alike.
+The [Journal of Open Source Software](https://joss.theoj.org/about) is one such place to write about research software. They have a certain scope and focus on the developer side of things. If there is a smaller software package you would wish to review
+or you would like to focus on less technical details, other journals may be a better place. The Archäologische Informationen, e. g., are happy to take software reviews (such as [Thiery et al 202](https://doi.org/10.11588/ai.2022.1.95272) ). This journal also published [Recommendations for the review of archaeological research software](https://doi.org/10.11588/ai.2020.1.81423),
+which might help you think of questions to ask yourself in regards to the software you are reviewing. Smaller reviews may also be a good topic for a blog or a social media post. Such appraisals are very valuable for researchers looking for the best solution to their problem!
+
 ### Browse critical research on software development practices
