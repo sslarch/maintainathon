@@ -7,14 +7,11 @@ A README is a plaintext file that includes a detailed description of a project. 
 - Recognition of various contributors
 - Status updates, feature roadmaps, and an overview of the project's overall orientation
 
-For additional support on how to make or improve your readme, visit [makeareadme.com](https://www.makeareadme.com/). It provides excellent tips for writing clear and helpful readmes and templates that you may adapt for your own purposes.
+[makeareadme.com](https://www.makeareadme.com/) is a great resource that provides advice for writing clear and helpful readmes, including a template that you may adapt for your own purposes.
 
 ### Add comments to old code or code in progress
-Code comments appear as silent (i.e. non-functional) text embedded in the source code. They communicate what functions or series of standalone operations do and a brief description of how they are situated in broader workflows.
-
+Code comments appear as silent (i.e. non-functional) text embedded in the source code. They communicate what functions do by providing a brief description of how they are situated in broader workflows.
 They may also include notes and task lists for iteratively improving existing functions.
-
-Here is a great write-up about how to write effective code comments: [How to Write Professional Code Comments: A Beginner's Guide to Better Code Documentation (dev.to)](https://dev.to/anurag_dev/how-to-write-professional-code-comments-a-beginners-guide-to-better-code-documentation-27hf)
 
 Some qualities of good code comments include:
 
@@ -23,22 +20,119 @@ Some qualities of good code comments include:
 - Explain the "why", not the "what"
 - Written for your future self
 
-Here are some examples of great code comments:
+Here is a great write-up about how to write effective code comments: [How to Write Professional Code Comments: A Beginner's Guide to Better Code Documentation (dev.to)](https://dev.to/anurag_dev/how-to-write-professional-code-comments-a-beginners-guide-to-better-code-documentation-27hf)
 
-<!-- Make this appear as a two in-line columns -->
+Additionally, here are some great examples of code comments written by archaeologists:
 
-<!--
+::: {.panel-tabset}
+## Single-line
+From Joe Roe's [paleoclim](https://github.com/joeroe/rpaleoclim/blob/master/R/paleoclim.R):
+
 ```r
-xxx
-
+# Download
+if (!fs::file_exists(tmpfile) | isTRUE(skip_cache)) {
+  raster <- download_paleoclim(url, tmpfile, as, quiet)
+}
 ```
 
+## Multi-line
+From Joe Roe's [paleoclim](https://github.com/joeroe/rpaleoclim/blob/master/R/paleoclim.R):
+
 ```r
-xxx
+#' Load data from PaleoClim
+#'
+#' Loads a PaleoClim data file (`.zip` format) into R as a `SpatRaster`.
+#'
+#' @param file Character. Path to a *.zip file downloaded from PaleoClim.
+#' @param as          Character. `as = "raster"` returns a `RasterStack` object
+#'                    (see [raster::stack()]) instead of the default raster from
+#'                    the `terra` package. It is provided for backwards
+#'                    compatibility and will be removed in future versions.
+#'                    Requires the `raster` package.
+#'
+#' @return
+#' `SpatRaster` object (see [terra::rast()]) with each bioclimatic variable
+#' as a separate named layer.
+#'
+#' @export
+#'
+#' @examples
+#' file <- system.file("testdata", "LH_v1_10m_cropped.zip",
+#'                     package = "rpaleoclim")
+#' load_paleoclim(file)
+load_paleoclim <- function(file, as = c("terra", "raster")) {
+  as <- rlang::arg_match(as)
 
-``` -->
+  tmpdir <- fs::file_temp("paleoclim_")
+  utils::unzip(file, exdir = tmpdir)
 
-### Archive your code in long-term repository
+  tifs <- fs::dir_ls(tmpdir, recurse = TRUE, glob = "*.tif")
+  names(tifs) <- fs::path_ext_remove(fs::path_file(tifs))
+
+  if (length(tifs) > 0) raster <- terra::rast(tifs)
+  else raster <- terra::rast()
+
+  if (as == "raster" ) {
+    if (!requireNamespace("raster", quietly = TRUE)) {
+      rlang::abort(
+        '`as = "raster"` requires package `raster`',
+        class = "rpaleoclim_missing_package"
+      )
+    }
+```
+
+## Documentation
+From Joe Roe's [paleoclim](https://github.com/joeroe/rpaleoclim/blob/master/R/paleoclim.R):
+
+```r
+#' Retrieve data from PaleoClim
+#'
+#' Downloads data from PaleoClim (<http://www.paleoclim.org>) and loads it into R
+#' as a `SpatRaster` object.
+#'
+#' @param period      Character. Time period to retrieve.
+#' @param resolution  Character. Resolution to retrieve.
+#' @param region      `SpatExtent` object or object that can be coerced to
+#'                    `SpatExtent` (see [terra::ext()]), describing the
+#'                    region to be retrieved. If `NULL`, defaults to the whole
+#'                    globe.
+#' @param as          Character. `as = "raster"` returns a `RasterStack` object
+#'                    (see [raster::stack()]) instead of the default raster from
+#'                    the `terra` package. It is provided for backwards
+#'                    compatibility and will be removed in future versions.
+#'                    Requires the `raster` package.
+#' @param skip_cache  Logical. If `TRUE`, cached data will be ignored.
+#' @param cache_path  Logical. Path to directory where downloaded files should
+#'   be saved. Defaults to R's temporary directory.
+#' @param quiet       Logical. If `TRUE`, suppresses messages and download
+#'   progress information.
+#'
+#' @details
+#' See <http://www.paleoclim.org> for details of the datasets and codings.
+#' Data at 30s resolution is only available for 'cur' and 'lgm'.
+#'
+#' By default, `paleoclim()` will read previously downloaded files in R's
+#' temporary directory if available. Use `skip_cache = TRUE` to override this.
+#' `cache_path` can also be set to another directory. This can be useful if you
+#' want to reuse downloaded data between sessions.
+#'
+#' @return
+#' `SpatRaster` object (see [terra::rast()]) with each bioclimatic variable
+#' as a separate named layer.
+#'
+#' @export
+#'
+#' @examplesIf interactive() && curl::has_internet()
+#' paleoclim("lh", "10m")
+```
+
+## Inline
+
+## TODO
+
+:::
+
+### Archive your code in a long-term repository
 While commercial platforms like GitHub and GitLab may provide very useful collaboration features, they should not be trusted as long-term stewards of software or data. Professional archives should instead be used to backup public-facing code repositories.
 
 [Zenodo](https://zenodo.org/) is a general-purpose open repository developed under the European OpenAIRE program and operated by CERN, which allows researchers to deposit research papers, data sets, research software, reports, and any other research related digital artefacts. One of its key features is direct [integration with GitHub](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content), and once configured, saves a snapshot of each release. For each submission, a persistent digital object identifier (DOI) is minted.
@@ -58,17 +152,17 @@ There are [numerous schemes](https://nesbitt.io/2024/06/24/from-zerover-to-semve
   - For "rolling" releases that follow a regular maintenance cycle.
 
 ### Add a license
-Licenses describe legal right for accessing, using and modifying code. Open licenses, which enable widespread and uninhibited use, are increasingly common, however copyleft or opinionated licenses impose restrictions that add conditions based on specific use-cases. For instance, [CC-NC limits reuse to non-commercial applications](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation), [copyleft](https://en.wikipedia.org/wiki/Copyleft) forces downstream applications to adopt an equally permissive license for any derivative works, and numerous other licenses are aligned with specific social causes. [The Hippocratic License hosts a tool](https://firstdonoharm.dev/build/) for creating a custom license, including explicit allowances and restrictions for various potential use-cases, such as a Fossil Fuel Divestment module, a Law Enforcement module, and a Supply Chain Transparency module.
+Licenses describe legal rights for accessing, using and modifying code. Open licenses, which enable widespread and uninhibited use, are increasingly common, however copyleft or opinionated licenses impose restrictions that add conditions based on specific use-cases. For instance, [CC-NC limits reuse to non-commercial applications](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation), [copyleft](https://en.wikipedia.org/wiki/Copyleft) forces downstream applications to adopt an equally permissive license for any derivative works, and numerous other licenses are aligned with specific social causes. [The Hippocratic License hosts a tool](https://firstdonoharm.dev/build/) for creating a custom license, including explicit allowances and restrictions for various potential use-cases, such as a Fossil Fuel Divestment module, a Law Enforcement module, and a Supply Chain Transparency module.
 
 Visit [choosealicense.com](https://choosealicense.com/) for an extremely detailed survey and comparison of various software and non-software licenses. There is also a page [describing what happens if you don't choose a license](https://choosealicense.com/no-permission/).
 
 Note that software licenses are often distinct from licenses intended for non-software materials, such as data, media, documentation and fonts.
 
 ### Add a citation file
-A [cff file](https://citation-file-format.github.io/) is a plaintext file with .cff extension containing information that can be picked up by a reference manager to generate clean citations. It follows a yaml format, which is both human- and machine-readable. See the example below for some common information to include in your cff.
+A [cff file](https://citation-file-format.github.io/) is a plaintext file with .cff extension containing information that can be picked up by a reference manager to generate clean citations. It follows a yaml format, which is both human- and machine-readable.
 
-<details>
-<summary>Example cff file</summary>
+See the example below from Maddison Simon's and Sophie Schmidt's [Percopackage](https://github.com/SCSchmidt/percopackage/) for some common information to include in your cff:
+
 ```yaml
 cff-version: 1.2.0
 message: "If you use this software, please cite it as below."
@@ -86,7 +180,6 @@ identifiers:
     value: 10.17605/OSF.IO/7EXTC
 date-released: 2024-08-24
 ```
-</details>
 
 ### Develop a project roadmap
 It may be helpful to develop a plan of action to structure future work. Some factors to consider include:
@@ -97,8 +190,7 @@ It may be helpful to develop a plan of action to structure future work. Some fac
 - Who can I call on for support?
 
 Effective roadmaps have tangible and measurable outcomes, and are comprised of tasks that can actually be acted upon.
-
-Source: <https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development>
+See [this resource](https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development) for some great tips on how to write great roadmaps.
 
 ### Acknowledge contributors
 Open source projects thrive based on community support, and acknowledging contributors is a great way to maintain enthusiasm among the team. This can be done in the README, on social media, and in any other venue where you share your work (journal articles, conference presentations, etc).
@@ -116,19 +208,18 @@ Archaeologists may consider reaching out to [open-archaeo.info](https://open-arc
 Additionally, the [archaeology CRAN task view](https://github.com/benmarwick/ctv-archaeology) lists numerous studies that include publicly accessible R code, which is a great resource for understanding how the community uses R in their research.
 
 ### Archive abandoned projects
-It may be prudent to acknowledge when it's time to tuck a project away, and mark it as [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories). This will put a banner on your repo and restrict any new pull requests.
+It may be prudent to acknowledge when it's time to tuck a project away and mark it as [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories). This will put a banner on your repo and restrict any new pull requests.
 
 If a project has been picked up by others, or the work continues in another forum, make sure to provide a link in the original README!
 
 ### Donate to FOSS projects
-While many archaeologists who write code benefit from access to a stable income, many others do not. In fact, archaeologists who write code tend to be precariously employed. Even a small donation shows deep appreciation, and can help motivate labour performed largely by volunteers.
+While many archaeologists who write code do benefit from a stable income, many do not. In fact, archaeologists who write code tend to be precariously employed. Even a small donation shows deep appreciation, and can help motivate labour performed largely by volunteers.
 
 If you are able to provide financial support, please reach out to the maintainers of your most-used tools to help compensate them for their labour!
 
 ### Post about your work
-Make it known that you're making cool stuff, and that anyone can use it! People may find even the most casual and thrown-together projects useful, if not in practice then as inspiration for building upon and improving!
-
-### Something about vibe coding
+Share the cool things you make, and communicate the fact that anyone can use or adapt them!
+Even if the code is messy, it may inspire others to learn about your methods and extend upon what you've already done.
 
 ### Test your code's functionality
 Testing your code involves including additional logic to test whether your code is operating as you expect it to. It is usually a good idea to write these unit tests before you write your code, and really think about what you want the outcome of each function or method to be. And then, as you write the function, test for that outcome as you iterate the development of that function. But often, in the excitement of working on a new project, we forget to test everything.
@@ -234,3 +325,5 @@ This journal also published [Recommendations for the review of archaeological re
 ### Open issues
 - On other projects
 - On your own projects
+
+### Something about vibe coding
