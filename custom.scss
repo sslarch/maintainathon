@@ -14,7 +14,7 @@ $bluegray: #c7d3e0 !default;
 $darker-green: #5a7a2b !default;
 $light-gray: #f1f3f5 !default;
 $mid-gray: #75776d !default;
-$darker-gray: #687178 !default;
+$darker-gray: #3b3b3b !default;
 $ssla-orange: #ec5e2a;
 $x: #3d3d3d;
 
@@ -51,3 +51,10 @@ $code-block-bg: $darker-gray !default;
 .blockquote {
   color: $mid-gray;
 }
+
+/*
+Source - https://stackoverflow.com/q
+Posted by Cxsaz, modified by community. See post 'Timeline' for change history
+Retrieved 2026-01-02, License - CC BY-SA 4.0
+*/
+

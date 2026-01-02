@@ -25,15 +25,32 @@
 .hashtag {
   font-size: 30px;
   color: #5a7a2b;
-  /* color: #ec5e2a; */
+  color: #ec5e2a;
 }
 
-/* h3 {
+h3 {
   font-size: 30px;
-}  */
-/* ul {
-  font-size: 20px;
-  /* columns: 2; */
-  /* -webkit-columns: 2; */
-  /* -moz-columns: 2; */
-} */
+}
+
+.columns-bullets {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.panel-tabset .nav-item .nav-link {
+  color: #fff;
+}
+
+.panel-tabset .nav-item .nav-link.active {
+  color: #fff;
+}
+
+details > summary {
+  color: #5a7a2b;
+  font-weight: bold;
+}
+
+summary::marker {
+  color: #5a7a2b;
+}

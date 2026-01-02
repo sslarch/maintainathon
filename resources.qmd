@@ -3,8 +3,8 @@ toc: true
 toc-depth: 4
 toc-expand: false
 ---
-### Documentation
-#### Write a better README
+## Documentation
+### Write a better README
 A README is a plaintext file that includes a detailed description of a project. It's typically located in the root directory, and often includes:
 
 - A broad overview of what the project does, why it was made, and the rationale behind the way it was implemented
@@ -15,16 +15,18 @@ A README is a plaintext file that includes a detailed description of a project. 
 
 [makeareadme.com](https://www.makeareadme.com/) is a great resource that provides advice for writing clear and helpful readmes, including a template that you may adapt for your own purposes.
 
-#### Add comments to old code or code in progress
+### Add comments to old code or code in progress
 Code comments appear as silent (i.e. non-functional) text embedded in the source code. They communicate what functions do by providing a brief description of how they are situated in broader workflows.
 They may also include notes and task lists for iteratively improving existing functions.
 
 Some qualities of good code comments include:
 
+::: {.columns-bullets}
 - Clear and concise
 - Easy to remove once a fix has been implemented
 - Explain the "why", not the "what"
 - Written for your future self
+:::
 
 Here is a great write-up about how to write effective code comments: [How to Write Professional Code Comments: A Beginner's Guide to Better Code Documentation (dev.to)](https://dev.to/anurag_dev/how-to-write-professional-code-comments-a-beginners-guide-to-better-code-documentation-27hf)
 
@@ -138,7 +140,7 @@ From Joe Roe's [paleoclim](https://github.com/joeroe/rpaleoclim/blob/master/R/pa
 
 :::
 
-#### Add a citation file
+### Add a citation file
 A [cff file](https://citation-file-format.github.io/) is a plaintext file with .cff extension containing information that can be picked up by a reference manager to generate clean citations. It follows a yaml format, which is both human- and machine-readable.
 
 See the example below from Maddison Simon's and Sophie Schmidt's [Percopackage](https://github.com/SCSchmidt/percopackage/) for some common information to include in your cff:
@@ -161,45 +163,41 @@ identifiers:
 date-released: 2024-08-24
 ```
 
-
-#### Writing comprehensive documentation
+### [in progress:]{.mark} Writing comprehensive documentation
 - For more complex software, going beyond a readme
 - Sphynx and other tools
 - Best practices
 - Provide some excellent examples
 
 
-### Longevity
-#### Archive abandoned projects
-It may be prudent to acknowledge when it's time to tuck a project away and mark it as [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories). This will put a banner on your repo and restrict any new pull requests.
-
-If a project has been picked up by others, or the work continues in another forum, make sure to provide a link in the original README!
-
-#### Archive your code in a long-term repository
+## Longevity
+### Archive your code in a long-term repository
 While commercial platforms like GitHub and GitLab may provide very useful collaboration features, they should not be trusted as long-term stewards of software or data. Professional archives should instead be used to backup public-facing code repositories.
 
 [Zenodo](https://zenodo.org/) is a general-purpose open repository developed under the European OpenAIRE program and operated by CERN, which allows researchers to deposit research papers, data sets, research software, reports, and any other research related digital artefacts. One of its key features is direct [integration with GitHub](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content), and once configured, saves a snapshot of each release. For each submission, a persistent digital object identifier (DOI) is minted.
 
 [Software Heritage](https://www.softwareheritage.org/) is another archive dedicated to preserving publicly accessible code. It regularly crawls several software forges and package indexes, and anyone can [upload their own repositories](https://archive.softwareheritage.org/save/) too.
 
-#### Develop a release strategy
+### Archive abandoned projects
+It may be prudent to acknowledge when it's time to tuck a project away and mark it as [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories). This will put a banner on your repo and restrict any new pull requests.
+
+If a project has been picked up by others, or the work continues in another forum, make sure to provide a link in the original README!
+
+### Develop a release strategy
 Sharing code as a series of stable releases makes it easier to share code with predictable functionality. As new features are implemented or when the codebase changes in substantial ways, the software should be rolled into a new release. This enhances clarity for what users can expect when they download a specific release. It also makes it easier to communicate and de-bug issues raised by users by ensuring that all parties are accessing the same codebase.
 
 There are [numerous schemes](https://nesbitt.io/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html) for releasing code, which enable developers to communicate the degree of changes made between versions. Some of these include:
 
-- [Semantic Versioning](https://semver.org/)
-  - Major, Minor or Patch versions indicate breaking changes relative to prior versions.
-- [Alternative Versioning (AltVer)](https://altver.org/)
-  - Tracks implementation of major overhauls, new features, and careful maintenance.
-- [Calendar Versioning (CalVer)](https://calver.org/)
-  - For "rolling" releases that follow a regular maintenance cycle.
+- [Semantic Versioning](https://semver.org/): Major, Minor or Patch versions indicate breaking changes relative to prior versions.
+- [Alternative Versioning (AltVer)](https://altver.org/): Tracks implementation of major overhauls, new features, and careful maintenance.
+- [Calendar Versioning (CalVer)](https://calver.org/): For "rolling" releases that follow a regular maintenance cycle.
 
-### Productivity
-#### Open issues
+## Productivity
+### [in progress:]{.mark} Open issues
 - On other projects
 - On your own projects
 
-#### Develop a project roadmap
+### Develop a project roadmap
 It may be helpful to develop a plan of action to structure future work. Some factors to consider include:
 
 - What features are on the horizon?
@@ -211,39 +209,33 @@ Effective roadmaps have tangible and measurable outcomes, and are comprised of t
 See [this resource](https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development) for some great tips on how to write great roadmaps.
 
 
-### Collaboration and Community-Building
-#### Add a license
+## Collaboration and Community-Building
+### Add a license
 Licenses describe legal rights for accessing, using and modifying code. Open licenses, which enable widespread and uninhibited use, are increasingly common, however copyleft or opinionated licenses impose restrictions that add conditions based on specific use-cases. For instance, [CC-NC limits reuse to non-commercial applications](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation), [copyleft](https://en.wikipedia.org/wiki/Copyleft) forces downstream applications to adopt an equally permissive license for any derivative works, and numerous other licenses are aligned with specific social causes. [The Hippocratic License hosts a tool](https://firstdonoharm.dev/build/) for creating a custom license, including explicit allowances and restrictions for various potential use-cases, such as a Fossil Fuel Divestment module, a Law Enforcement module, and a Supply Chain Transparency module.
 
 Visit [choosealicense.com](https://choosealicense.com/) for an extremely detailed survey and comparison of various software and non-software licenses. There is also a page [describing what happens if you don't choose a license](https://choosealicense.com/no-permission/).
 
 Note that software licenses are often distinct from licenses intended for non-software materials, such as data, media, documentation and fonts.
 
-
-#### Acknowledge contributors
+### Acknowledge contributors
 Open source projects thrive based on community support, and acknowledging contributors is a great way to maintain enthusiasm among the team. This can be done in the README, on social media, and in any other venue where you share your work (journal articles, conference presentations, etc).
 
 When acknowledging the people behind the code, be sure to describe **_how_** people contribute, including specific things they've done to move the project forward.
 
 Highlighting the roles of contributors coming from under-represented backgrounds may also help foster more inclusive developer communities, which is great for enhancing the quality of both communities and codebases.
 
-#### List your project in a community registry
+### List your project in a community registry
 It may be beneficial to include your project in a community registry to ensure that the work is findable and accessible by target audiences.
 
 Archaeologists may consider reaching out to [open-archaeo.info](https://open-archaeo.info/), which is a list of open source software and resources developed by and for archaeologists. [AncientMetagenomeDir](https://www.spaam-community.org/AncientMetagenomeDir/#/) is a similar resource specializing on tools developed in support of ancient DNA research.
 
 Additionally, the [archaeology CRAN task view](https://github.com/benmarwick/ctv-archaeology) lists numerous studies that include publicly accessible R code, which is a great resource for understanding how the community uses R in their research.
 
-#### Donate to FOSS projects
-While many archaeologists who write code do benefit from a stable income, many do not. In fact, archaeologists who write code tend to be precariously employed. Even a small donation shows deep appreciation, and can help motivate labour performed largely by volunteers.
-
-If you are able to provide financial support, please reach out to the maintainers of your most-used tools to help compensate them for their labour!
-
-#### Post about your work
+### Post about your work
 Share the cool things you make, and communicate the fact that anyone can use or adapt them!
 Even if the code is messy, it may inspire others to learn about your methods and extend upon what you've already done.
 
-#### Establish coding guidelines for your research group
+### [in progress:]{.mark} Establish coding guidelines for your research group
 Develop some solid practices.
 Ensure they are actionable.
 Maybe something like "good enough" practices.
@@ -251,21 +243,26 @@ Maybe something like "good enough" practices.
 DO NOT assign this task to the most technical person in the room.
 DO make plans to revisit this document one month, six months, etc in the future --- mark it down in your calendar now!
 
-#### Post contributor guidelines
+### [in progress:]{.mark} Post contributor guidelines
 - Reference the Mastodon Server Covenant: https://joinmastodon.org/covenant
 - Reference the Archaeological Ethics Database: https://archaeologicalethics.org/
 
 Ensure that there are mechanisms to follow through on these guidelines; they are meaningless unless they can be backed by action.
 
-#### Perform a code review
+### Donate to FOSS projects
+While many archaeologists who write code do benefit from a stable income, many do not. In fact, archaeologists who write code tend to be precariously employed. Even a small donation shows deep appreciation, and can help motivate labour performed largely by volunteers.
+
+If you are able to provide financial support, please reach out to the maintainers of your most-used tools to help compensate them for their labour!
+
+### Perform a code review
 You may think, wait, is this something for a maintainathon? We say yes! Software reviews are valuable for people maintaining the software. It may give hints about what to improve and what to keep just as it is, as it works perfectly already. A review also raises awareness for the software, which is great for developers and potential users alike.
 
 The [Journal of Open Source Software](https://joss.theoj.org/about) is one such place to write about research software. They have a certain scope and focus on the developer side of things. If there is a smaller software package you would wish to review or you would like to focus on less technical details, other journals may be a better place. For example, Archäologische Informationen are happy to take software reviews (such as [Thiery et al 2022](https://doi.org/10.11588/ai.2022.1.95272)).
 
 This journal also published [Recommendations for the review of archaeological research software](https://doi.org/10.11588/ai.2020.1.81423), which might help you think of questions to ask yourself in regards to the software you are reviewing. Smaller reviews may also be a good topic for a blog or a social media post. Such appraisals are very valuable for researchers looking for the best solution to their problem!
 
-### Technical
-#### Test your code's functionality
+## Technical
+### Test your code's functionality
 Testing your code involves including additional logic to test whether your code is operating as you expect it to. It is usually a good idea to write these unit tests before you write your code, and really think about what you want the outcome of each function or method to be. And then, as you write the function, test for that outcome as you iterate the development of that function. But often, in the excitement of working on a new project, we forget to test everything.
 
 Writing tests helps you save your code from yourself: If you change things later on, you can make sure that you still get the same results. For more complex projects, you will also want to add integration tests that check whether all the parts work together in the way that you want them to.
@@ -330,13 +327,15 @@ Done! We now wrote two *unit tests* (even though one of them will fail miserably
 
 </details>
 
-#### Optimizing for speed and efficiency
+### [in progress:]{.mark} Optimizing for speed and efficiency
 
-#### Setup CI
+### [in progress:]{.mark} Setup CI
 
-### Other
-#### Browse critical research on software development practices
+## Other
 
-#### Something about vibe coding
+### [in progress:]{.mark} Something about vibe coding
 
-#### Cleanup your working directories
+### [in progress:]{.mark} Cleanup your working directories
+
+## Further Reading
+[in progress:]{.mark}
