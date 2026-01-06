@@ -1,0 +1,56 @@
+/* css styles */
+
+.title {
+  font-size: 60px;
+}
+
+.subtitle {
+  font-size: 40px;
+  text-emphasis: bold;
+}
+
+.summary {
+  display: inline-block;
+  position: relative;
+  font-size: 35px;
+}
+
+.maintext {
+  padding-top: 1em;
+  display: inline-block;
+  position: relative;
+  font-size: 25px;
+}
+
+.hashtag {
+  font-size: 30px;
+  color: #5a7a2b;
+  color: #ec5e2a;
+}
+
+h3 {
+  font-size: 30px;
+}
+
+.columns-bullets {
+  columns: 2;
+  -webkit-columns: 2;
+  -moz-columns: 2;
+}
+
+.panel-tabset .nav-item .nav-link {
+  color: #fff;
+}
+
+.panel-tabset .nav-item .nav-link.active {
+  color: #fff;
+}
+
+details > summary {
+  color: #5a7a2b;
+  font-weight: bold;
+}
+
+summary::marker {
+  color: #5a7a2b;
+}
