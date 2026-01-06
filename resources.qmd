@@ -235,7 +235,7 @@ Additionally, the [archaeology CRAN task view](https://github.com/benmarwick/ctv
 Share the cool things you make, and communicate the fact that anyone can use or adapt them!
 Even if the code is messy, it may inspire others to learn about your methods and extend upon what you've already done.
 
-### [in progress:]{.mark} Post contributor guidelines
+### Post contributor guidelines
 Contributor guidelines inform prospective contributors about how they should engage with the codebase.
 They may include requests to focus on specific aspects of the project, and requirements to provide specific information in pull requests or issues.
 They may also outline the parameters through which code is vetted before being folded into the main branch.
@@ -243,7 +243,7 @@ They may also outline the parameters through which code is vetted before being f
 Contributing guidelines are often specified in a [CONTRIBUTING.md file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors).
 The Good Docs Project has written about the value of [contributing guidelines](https://www.thegooddocsproject.dev/template/contributing-guide), and has also provided [a great template](https://gitlab.com/tgdp/templates/-/blob/main/contributing-guide/template_contributing-guide.md) for you to adapt for your own project.
 
-### [in progress:]{.mark} Post a code of conduct
+### Post a code of conduct
 A code of conduct demonstrates that you are able to foster a warm and welcoming community.
 They accomplish this by encouraging ethical and inclusive behaviour and by establishing parameters for a collaborative, respectful and safe work environment.
 
@@ -334,12 +334,6 @@ Done! We now wrote two *unit tests* (even though one of them will fail miserably
 ### [in progress:]{.mark} Optimizing for speed and efficiency
 
 ### [in progress:]{.mark} Setup CI
-
-## Other
-
-### [in progress:]{.mark} Something about vibe coding
-
-### [in progress:]{.mark} Cleanup your working directories
 
 ## Further Reading
 ### Research software engineering
