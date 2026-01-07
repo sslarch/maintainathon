@@ -163,11 +163,30 @@ identifiers:
 date-released: 2024-08-24
 ```
 
-### [in progress:]{.mark} Writing comprehensive documentation
-- For more complex software, going beyond a readme
-- Sphynx and other tools
-- Best practices
-- Provide some excellent examples
+### Writing comprehensive documentation
+When a README file is not enough, or if you want to e.g. host your code documentation on a separate website, you can use a _documentation generator_ such as [Sphinx](https://www.sphinx-doc.org/en/master/index.html). Sphinx is a tool that generates a series of HTML files (or PDF) starting from a directory containing reStructuredText or Markdown files.
+
+Sphinx can be extended in various ways and it can power a whole website including other elements such as blog pages, homepages or books. However, it is primarily used to write documentation websites. To get a sense of what this looks like, look at many big documentation websites which are powered by Sphinx, such as the [Python documentation](https://docs.python.org/3/) and the [Linux Kernel documentation](https://docs.kernel.org/). Other extensions allow e.g. to use LaTeX scripts within the documentation files.
+
+Sphinx can be set up easily: after installation it's enough to run `sphinx-quickstart` from a project folder to create the necessary boilerplate to host the documentation. The documentation can then be extended in whatever way it is preferred. A particularly useful resource within Sphinx is autodoc, which can populate an API documentation page using docstrings from functions in the code. 
+
+For example, we can document a function within a code as (example from [CodeRefinery lecture on documentation](https://coderefinery.github.io/documentation/sphinx/#exercise-sphinx-autodoc), [DOI](doi.org/10.5281/zenodo.8280234))
+
+```python
+def multiply(a: float, b: float) -> float:
+    """
+    Multiply two numbers.
+
+    :param a: First number.
+    :param b: Second number.
+    :return: The product of a and b.
+    """
+    return a * b
+```
+
+With Sphinx autodoc set up, the multiline comment would be pulled into an "API reference" section. This highlights the importance of writing documentation at the level of the code, and Sphinx allows to access documentation in a specific, well organized location. Because the resulting files are generally HTML, the documentation can then be hosted on a server as its own website, or as part of another website, such as a Github Pages webpage (as in Matteo Tomasini's example on [MetaPypulation](https://mtomasini.github.io/MetapopulationsPython/) (see the code [here](https://github.com/mtomasini/MetapopulationsPython/tree/main/docs)).
+
+Because the Sphinx documentation needs to be rebuilt after each change, it's a good idea to automatize the process through the usage of Github Actions or other CI tools.
 
 
 ## Longevity
@@ -333,10 +352,114 @@ Done! We now wrote two *unit tests* (even though one of them will fail miserably
 
 ### [in progress:]{.mark} Optimizing for speed and efficiency
 
-### [in progress:]{.mark} Setup CI
+### [in progress:]{.mark} Setup Continuous Integration
+Continuous integration (CI) refers to the process of automating tasks pertaining to the integration of changes and new features into existing software. The automatization process can be setup for different tasks such as building a software, testing, generating documentation, etc. There are several CI tools that can be used, one of the most accessible is Github Actions (but do check out GitLab CI if you work on Gitlab). 
+
+Github Actions come in different flavors and can do many different things: for example, if you have setup a website using Github Pages, Github runs actions under the "hood" to build the website after each change committed. But Github Actions can be set-up for our own projects too. There is a whole [marketplace](https://github.com/marketplace?type=actions) of actions to choose from.
+
+To set up an automatic Github action, one needs to go in the repository of the project and click on Actions, then click on "New Workflow".
+
+![](images/github_actions_new-workflow.png)
+
+Then, select the action you would like to set up. For example to set up automated testing on a Python software, you would choose "Python Application".
+
+![](images/github_actions_application.png)
+
+This will create a yaml script in the `.github/workflows` folder, that can be modified to correspond to one's own needs. For example, in the following file, the Github Action will perform three actions: 
+
+```yaml
+# This workflow will install Python dependencies, run tests and lint with a single version of Python
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-python
+
+name: Python application
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3	# <1>
+      with:
+        python-version: "3.12"
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip # <1>
+        pip install flake8 pytest pytest-cov # <1> 
+        if [ -f requirements.txt ]; then pip install -r requirements.txt; fi # <1>
+    - name: Lint with flake8
+      run: |
+        # stop the build if there are Python syntax errors or undefined names 
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics # <2>
+        # exit-zero treats all errors as warnings. The GitHub editor is 127 chars wide
+        flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics # <2>
+    - name: Test with pytest and calculate coverage
+      run: |
+        pytest --cov-report "xml:coverage.xml" --cov=. # <3>
+    - name: Create coverage
+      if: ${{ github.event_name == 'pull_request' }}
+      uses: orgoro/coverage@v3
+      with: 
+        coverageFile: coverage.xml
+        token: ${{ secrets.GITHUB_TOKEN }}
+```
+1. setting up the Python version and installing the dependencies to run the Python application (necessitates a requirements.txt file in the directory), 
+2. linting
+3. testing using the functions defined by the user -- this last action also generates a test coverage report.
+
+In another example, the following action is set up to deploy the documentation generated with Sphinx on the user's Github Pages instance.
+
+```yaml
+name: example
+
+on: [push, pull_request, workflow_dispatch]
+
+permissions:
+  contents: write
+
+jobs:
+  docs:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+      - name: Install dependencies
+        run: |
+          pip install sphinx myst_parser
+          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
+      - name: Sphinx build
+        run: |
+          sphinx-apidoc -o ./docs/source ./metapypulation
+          sphinx-build ./docs/source build/
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        with:
+          publish_branch: gh-pages
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: build/
+          force_orphan: true
+```
+
+However you want to use CI, it is invaluable. After setting up an action for automated testing, for example, after each commit and push to the Github repository, you will get a notification of failed tests, or successful deployment, or whatever action you have set up for your project.
 
 ## Further Reading
 ### Research software engineering
+Bast, R. et al. (2023) "How to document your research software - CodeRefinery lesson". Available at: https://zenodo.org/records/8280235 (Accessed: January 7, 2026).
+
+Bast, R. et al. (2025) "Automated testing - CodeRefinery lesson". Available at: https://zenodo.org/records/16410888 (Accessed: January 7, 2026)
+
 Coelho, J. and Valente, M.T. (2017) "Why modern open source projects fail," in Proceedings of the 2017 11th Joint Meeting on Foundations of Software Engineering. ESEC/FSE’17: Joint Meeting of the European Software Engineering Conference and the ACM SIGSOFT Symposium on the Foundations of Software Engineering, Paderborn Germany: ACM, pp. 186–196. Available at: https://doi.org/10.1145/3106237.3106246.
 
 Irving, D. et al. (2021) Research Software Engineering with Python. Available at: https://third-bit.com/py-rse/ (Accessed: January 2, 2026).
