@@ -394,17 +394,25 @@ Done! We now wrote two *unit tests* (even though one of them will fail miserably
 ## Setup Continuous Integration
 Continuous integration (CI) refers to the process of automating tasks pertaining to the integration of changes and new features into existing software. The automatization process can be setup for different tasks such as building a software, testing, generating documentation, etc. There are several CI tools that can be used, one of the most accessible is Github Actions (but do check out GitLab CI if you work on Gitlab). 
 
+CI pipelines can also be run locally, specifically to deal with tasks that depend on several pieces of code that are connected in complicated ways. While there is a strong temptation to write one unique code that calls different functions in sequence, a better way to operate is to write different pieces dealing with different functions, and then making them interact through GNU [Make](https://www.gnu.org/software/make/). Make is a tool that controls how a software will run (executables, outputs, etc) from a series of source code files. To do this, one can use a [`makefile`](https://makefiletutorial.com/), a file that dictates how different pieces of a pipeline interact. 
+
+Imagine for example that you have an analysis composed of different steps, each steps producing the input for the next step. In certain situation you will want all steps to run in sequence, but in some situations you would like only certain steps to run (e.g. because other steps have been run previously and need no re-running). A `makefile` orchestrates different pieces using the Make tool. While Make is typically operating on languages that need building (think C and C++), other languages have their own tools doing the same thing, such as Snakemake (for Python) and the library [MakefileR](https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html) (for R).
+
+### More in detail: usage of Github Actions
+
 Github Actions come in different flavors and can do many different things: for example, if you have setup a website using Github Pages, Github runs actions "under the hood" to build the website after each change committed. But Github Actions can be set-up for our own projects too. There is a whole [marketplace](https://github.com/marketplace?type=actions) of actions to choose from.
+
+By setting up the correct Github Action (or whatever other tool you are using -- here we stick with the Github example for clarity), a series of steps is executed everytime the code is pushed to a Github repository. In case of steps that might break something, it is also possible to create Github Actions when a branch is merged, and this can be paired with [branch protection rules](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule) to stop merges that would break the code.
 
 To set up an automatic Github action, one needs to go in the repository of the project and click on Actions, then click on "New Workflow".
 
 ![](images/github_actions_new-workflow.png)
 
-Then, select the action you would like to set up. For example to set up automated testing on a Python software, you would choose "Python Application".
+Then, select the action you would like to set up. As an example, to set up automated testing on a Python software, you would choose "Python Application".
 
 ![](images/github_actions_application.png)
 
-This will create a yaml script in the `.github/workflows` folder, that can be modified to correspond to one's own needs. For example, in the following file, the Github Action will perform three actions: 
+This will create a yaml script in a `.github/workflows` folder, that can be modified to correspond to one's own needs. One of the most straightforward ways to use Github Actions is to use it so that tests are run everytime you push a code (see section about testing, above), instead of having to run tests manually. For example, in the following file, the Github Action will perform three actions in order to test a code written in Python: 
 
 ```yaml
 # This workflow will install Python dependencies, run tests and lint with a single version of Python
@@ -453,11 +461,11 @@ jobs:
         coverageFile: coverage.xml
         token: ${{ secrets.GITHUB_TOKEN }}
 ```
-1. setting up the Python version and installing the dependencies to run the Python application (necessitates a requirements.txt file in the directory), 
+1. setting up the Python environment and installing the dependencies to run the Python application (necessitates a requirements.txt file in the directory), 
 2. linting
-3. testing using the functions defined by the user -- this last action also generates a test coverage report.
+3. testing using the functions defined by the user -- this last action also generates a test coverage report. Note that you still need to write the tests yourself!
 
-In another example, the following action is set up to deploy the documentation generated with Sphinx on the user's Github Pages instance.
+Another way to use Github Actions is to have it (re-)deploy a webpage to the hosting domain everytime the code is pushed. This is something that happens automatically when setting up a Github Pages -- Github provides a default Github Action in this case. For example, to deploy the documentation generated with Sphinx on the user's Github Pages instance (see section about documentation), one could use a code like the following:
 
 ```yaml
 name: example
@@ -491,7 +499,7 @@ jobs:
           force_orphan: true
 ```
 
-However you want to use CI, it is invaluable. After setting up an action for automated testing, for example, after each commit and push to the Github repository, you will get a notification of failed tests, or successful deployment, or whatever action you have set up for your project.
+However you want to use CI, it is invaluable. Understanding how to do it, one can develop automated workflows that are triggered by code changes, thus ensuring robust software development.  
 
 # Further Reading
 ## Research software engineering
