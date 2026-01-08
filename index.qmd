@@ -13,8 +13,7 @@ subtitle: "Let's clean, document and revisit older code and data, together!"
 [✓.]{style="font-size: 24px; font-weight: bold; color: #5a7a2b;"} &nbsp;That's it!
 :::
 
-<!-- ### [Some things you can do to participate:]{style="color: #5a7a2b;"} -->
-### [Some things you can do to participate:]{style="color: #ec5e2a;"}
+### [Some things you can do to participate:]{style="color: #ab4642;"}
 
 <div style=" columns: 2; -webkit-columns: 2; -moz-columns: 2;">
 - Add comments to old code or code in progress
