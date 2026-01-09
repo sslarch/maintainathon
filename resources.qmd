@@ -203,6 +203,15 @@ date-released: 2024-08-24
 ```
 
 ## Writing comprehensive documentation
+In some situations you might want more comprehensive documentation than can be provided in a README file or as code comments.
+This can for example be in the form of manual pages for individual function that state what a given function does, the input it requires, what parameters can be adjusted, and the kind of data it returns.
+It can also be in the form of more expansive documents, for example to lay out a workflow in more detail or to present more specialized use-cases than that which is covered in the more general README. 
+
+Below follows outlines for how this can be done in Python and R, respectively:
+
+<details>
+<summary> Comprehensive documentation in Python</summary>
+
 When a README file is not enough, or if you want to host your code documentation on a separate website, you can use a _documentation generator_ such as [Sphinx](https://www.sphinx-doc.org/en/master/index.html). Sphinx is a tool that generates a series of HTML files (or PDF) starting from a directory containing reStructuredText or Markdown files.
 
 Sphinx can be extended in various ways and it can power a whole website including other elements such as blog pages, homepages or books. However, it is primarily used to write documentation websites. To get a sense of what this looks like, look at many big documentation websites which are powered by Sphinx, such as the [Python documentation](https://docs.python.org/3/) and the [Linux Kernel documentation](https://docs.kernel.org/). Other extensions allow using LaTeX scripts within the documentation files.
@@ -227,6 +236,88 @@ With Sphinx autodoc set up, the multiline comment would be pulled into an "API r
 
 Because the Sphinx documentation needs to be rebuilt after each change, it's a good idea to automatize the process through the usage of Github Actions or other CI tools.
 
+</details>
+
+<details>
+<summary> Comprehensive documentation in R </summary>
+
+The framework of a package offers a natural structure to draw on if you want to provide more comprehensive documentation for a project based in R.
+While packages are most commonly encountered in the form of software extensions that you can install locally to gain access to extended functionality, this framework also forms the foundation of what [Marwick et al. (2018](https://doi.org/10.1080/00031305.2017.1375986); [Marwick 2017](https://doi.org/10.1007/s10816-015-9272-9)) term a research compendium.
+Their package [rrtools](https://github.com/benmarwick/rrtools) provides tools to automatically set up a new, sensibly structured directory which you can work in if you aim to conduct and disseminate research in a reproducible manner using R.
+(Note that rrtools will be useful irrespective of whether the options for extended documentation presented below is relevant to you, as it also helps implementing and setting up other concepts covered in this document, such as a README file, licence, continuous integration, package versioning and more).
+Packages can also easily be published as websites, for example via the package [pkgdown](https://pkgdown.r-lib.org), and so the concept of a package is also related to how you could set up a website or blog using R (see for example [Quarto Websites](https://quarto.org/docs/websites/)).
+
+The definitive guide for packages in R is the freely available book [R packages](https://r-pkgs.org) by Hadley Wickham and Jennifer Bryan, which focuses on the development of software packages in R.
+However, as the concept of packaging up your work in R extends beyond that of software development, you will also find a wide range of more specialized guides for different use cases, such as setting up websites or writing academic papers by searching the web.    
+
+Two general concepts are covered here.
+One is function documentation and the other is longer-form documents, called vignettes in the context of R software packages.
+First we can take a look at some examples of both. We'll use the package [kairos](https://packages.tesselle.org/kairos/index.html) by Nicolas Frerebeau for this.
+You can follow this link to the kairos website to look at the manual page for the function `seriate_average()`: <https://packages.tesselle.org/kairos/reference/seriate_average.html>. 
+And this link to take a look at a longer-form vignette that gives a more in-depth presentation of seriation with kairos: <https://packages.tesselle.org/kairos/articles/seriation.html>.
+
+While this documentation has therefore also been made available on a separate website, it is also distributed with the package and can be accessed directly in R, provided the package is installed locally.
+Here is the R code to bring up the manual page for the same function:
+
+```r
+# Uncomment and run this code line to install kairos 
+# install.packages(kairos)
+
+# Load kairos 
+library(kairos)
+
+# These are two methods for bringing up the manual page 
+# for the function seriate_average() from kairos
+?seriate_average
+help("seriate_average")
+```
+And here is the R code for bringing up the kairos vignette for seriation:
+
+```r
+# List all vignettes available for kairos
+vignette(package = "kairos")
+
+# Display a specific vignette
+vignette("seriation")
+
+```
+When it comes to longer-form documents such as vignettes, typically written in [R Markdown](https://rmarkdown.rstudio.com) or the more recent [Quarto](https://quarto.org) format, this general framework extends far beyond software documentation, and can be used to generate any text such as books, research papers, reports, blog posts, supplementary documents and anything else.
+In the context of a software package, these are typically located in a `vignettes/` directory from where the files are rendered in R or on a website, as shown above.
+In the context of a research paper released with a research compendium, you might instead have one directory called `paper/` where the paper itself is located and another called `supplementary/` where supplementary documents are stored.
+A blog, on the other hand, might have directory called `posts/` from where each individual blog posts is rendered to a website.  
+
+When it comes to documenting functions, this is a slightly more specialized topic in R that can nonetheless be very useful.
+Manual pages for functions are useful for explaining to a user what a specific function is meant to do, to outline how different parameters can be adjusted and the consequences of this, it can point to other R functions that are relevant in conjunction with a specific function, and it can include useful links or literature references.
+This documentation therefore provides a more in-depth and comprehensive explanation of an individual function than what is typically laid out in for example a README, while at the same time giving a more top-level explanation in a standardized format than what is usually the case with code comments.
+
+The documentation of a function is commonly set up using [roxygen2](https://roxygen2.r-lib.org), which generates a document (in the form of an .Rd file) that R will render when you call the manual page, provided it is located in the correct `man/` directory within the package directory itself (see <https://r-pkgs.org/structure.html> for more on how to structure a source package).
+
+Documentation with roxygen2 is declared by starting each line of the documentation with `#'`, and is typically placed before the code definition of the function you are documenting.
+Here is an example given in the *R packages* book, where a simple function that adds two numbers together is documented using roxygen2 and then the function itself is defined in R code:
+
+```r
+#' Add together two numbers
+#' 
+#' @param x A number.
+#' @param y A number.
+#' @returns A numeric vector.
+#' @examples
+#' add(1, 1)
+#' add(10, 1)
+add <- function(x, y) {
+  # Add the numbers provided to the x and y parameters
+  x + y
+}
+```
+
+This starts with a description of what the function does.
+Then follows a list of parameters, stating what input data the function requires and the kind of data this should be.
+Parameters with default values which can be adjusted should also be listed here. After this is a description of what the function returns, followed by two examples of how the function can be used.
+After the roxygen2 documentation you can see the function definition itself in code form.
+A comment has also been added here (using the standard `#` symbol for defining comments in R) to indicate that you can (and should) still comment specific lines of code, even though this will not be visible on the manual page.
+You can compare this outline of a roxygen2 documentation to the manual page for `?seriate_average` to get a sense of how the different fields end up being formatted. 
+
+</details>
 
 # Longevity
 ## Archive your code in a long-term repository
