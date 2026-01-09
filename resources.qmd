@@ -251,9 +251,11 @@ There are [numerous schemes](https://nesbitt.io/2024/06/24/from-zerover-to-semve
 - [Calendar Versioning (CalVer)](https://calver.org/): For "rolling" releases that follow a regular maintenance cycle.
 
 # Productivity
-## Open issues
+::: {.hidden}
+## Open issues {.unlisted}
 - On other projects
 - On your own projects
+:::
 
 ## Develop a project roadmap
 It may be helpful to develop a plan of action to structure future work. Some factors to consider include:
