@@ -1,7 +1,7 @@
 ---
 title: |
   Digital Archaeology Maintainathon\
-  [#DigiArchMaintainathon]{.hashtag}
+  [[#DigiArchMaintainathon](https://archaeo.social/tags/DigiArchMaintainathon)]{.hashtag}
 subtitle: "Let's clean, document and revisit older code and data, together!"
 # description: "#DigiArchMaintainathon"
 ---
