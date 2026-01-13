@@ -15,6 +15,16 @@
   font-size: 35px;
 }
 
+.summary ol li:last-child {
+  list-style-type: none;
+  margin-left: -2rem;
+}
+
+.summary ol li:last-child::before {
+  content: "\2713\00a0";
+  color: #5a7a2b;
+}
+
 .maintext {
   padding-top: 1em;
   display: inline-block;
@@ -23,8 +33,7 @@
 }
 
 .hashtag {
-  font-size: 30px;
-  color: #ab4642;
+  font-size: smaller;
 }
 
 h3 {
