@@ -1,16 +1,15 @@
 ---
 title: |
   Digital Archaeology Maintainathon\
-  [[#DigiArchMaintainathon](https://archaeo.social/tags/DigiArchMaintainathon)]{.hashtag}
 subtitle: "Let's clean, document and revisit older code and data, together!"
 # description: "#DigiArchMaintainathon"
 ---
 
 ::: {.summary}
-1\.&nbsp; Put in the work\
-2\.&nbsp; Post about it\
-3\.&nbsp; Reflect and discuss\
-[✓.]{style="font-size: 24px; font-weight: bold; color: #5a7a2b;"} &nbsp;That's it!
+1. Put in the work
+2. Post about it [#DigiArchMaintainathon](https://archaeo.social/tags/DigiArchMaintainathon){.hashtag}
+3. Reflect and discuss
+4. That's it!
 :::
 
 ### [[Some things you can do to participate:](https://sslarch.github.io/maintainathon/resources)]{style="color: #ab4642;"}{.no-anchor}
