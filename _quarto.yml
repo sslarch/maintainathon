@@ -25,6 +25,8 @@ website:
       href: index.qmd
     - text: "Resources"
       href: resources.qmd
+    - text: "2026 Recap"
+      href: 2026-recap.qmd
     - icon: github
       href: https://github.com/sslarch/maintainathon
     - icon: mastodon

@@ -1,0 +1,53 @@
+---
+title: DigiArchMaintainathon 2026 Recap
+---
+The CAA SSLA recently organized the Digital Archaeology Maintainathon, a week-long event (January 12-16, 2026) dedicated to maintaining and improving archaeological research software. The community came together on Mastodon and Bluesky using the [#DigiArchMaintainathon](https://archaeo.social/tags/DigiArchMaintainathon) hashtag to learn from each other, share their progress, and celebrate the often-overlooked work of software maintenance.
+
+## What Participants Accomplished
+
+**Documentation and Metadata Improvements:**
+One of the most popular activities was adding and updating CITATION.cff files. Multiple participants added these citation files to their repositories, making it easier for others to properly credit their work.
+
+Participants also focused on improving README files, which serve as the first introduction to a project. These updates included clearer installation instructions, better project overviews, and recognition of contributors.
+
+**Archiving and Preservation:**
+Several maintainers took advantage of GitHub's integration with Zenodo to create permanent, citable archives of their code. The conversation touched on the importance of using professional archives rather than relying solely on commercial platforms like GitHub for long-term preservation.
+
+**Technical Improvements:**
+Joe Roe worked on preparing his R package [`rintchron`](https://rintchron.joeroe.io/) (an interface to the IntChron chronological data API) for CRAN submission, focusing on resolving outstanding issues and adapting tests for better reliability. Isak Roalkvam also fixed testing issues in the [`shoredate`](https://isakro.github.io/shoredate/) R package and expressed interest in optimizing code for better performance.
+
+On a similar note, Clemens Schmid wrote [a detailed blog post](https://nevrome.de/blog/posts/2026-01-12-futhark-in-ggpointgrid.html) about integrating Futhark code into R packages, demonstrating advanced optimization techniques for computational efficiency.
+
+**Community Resources:**
+Zack Batist updated the roadmap for [open-archaeo](https://open-archaeo.info/), a comprehensive list of open source archaeological software. He checked off completed items, added new tasks, and improved the document's structure. He also called for specialists in various archaeological sub-disciplines to help identify tools in their domains of expertise.
+
+Bjørn Peare Bartholdy began transferring projects from GitHub to Codeberg, citing better alignment with his values and concerns about GitHub's problematic pivot to AI.
+
+## Key Themes and Best Practices Shared
+
+Throughout the week, organizers shared practical guidance on various maintenance topics:
+
+**Testing and Quality Assurance:**
+The importance of unit tests was emphasized, with Matteo Tomasini noting that testing is "the only way I can keep up a software with many moving parts" and recommending testing from the start rather than retroactively.
+
+**Continuous Integration:**
+The event highlighted how CI automates essential tasks like building software, testing, and generating documentation, ensuring robust software development.
+
+**Licensing:**
+Participants were encouraged to properly license their code, with resources provided on selecting appropriate open source licenses.
+
+**Project Planning:**
+The value of roadmaps was discussed—documented plans that structure future work, document features, and make development more transparent for users and potential contributors.
+
+**Code Reviews:**
+The community discussed how code reviews provide constructive feedback to maintainers while raising awareness of tools, creating a win-win situation for developers and users.
+
+**Fostering Community:**
+The maintainathon emphasized recognizing contributors publicly and encouraging users to share which tools they're using, helping developers understand their impact.
+
+## Looking Forward
+
+The maintainathon successfully showcased the work that often goes unseen in digital archaeology: the ongoing care that maintains the code's accessibility and long-term value.
+We are very happy to have organized this event, and we look forward to building upon it in the future!
+
+Special thanks to Zack Batist, Metteo Tomasini and Sophie Schmidt for leading the event, and to all members of the SSLA who helped get this off the ground.
