@@ -168,6 +168,34 @@
     "text": "Culture and history of FOSS\nColeman, E.G. (2012) Coding Freedom: The Ethics and Aesthetics of Hacking. Princeton University Press. https://doi.org/10.1515/9781400845293\nKelty, C.M. (2008) Two bits: The cultural significance of free software. Duke University Press. https://www.dukeupress.edu/two-bits\nO’Neil, M. (2009) Cyberchiefs: Autonomy and authority in online tribes. London, UK: Pluto Press. https://doi.org/10.2307/j.ctt183pc3c"
   },
   {
+    "objectID": "2026-recap.html",
+    "href": "2026-recap.html",
+    "title": "DigiArchMaintainathon 2026 Recap",
+    "section": "",
+    "text": "The CAA SSLA recently organized the Digital Archaeology Maintainathon, a week-long event (January 12-16, 2026) dedicated to maintaining and improving archaeological research software. The community came together on Mastodon and Bluesky using the #DigiArchMaintainathon hashtag to learn from each other, share their progress, and celebrate the often-overlooked work of software maintenance."
+  },
+  {
+    "objectID": "2026-recap.html#what-participants-accomplished",
+    "href": "2026-recap.html#what-participants-accomplished",
+    "title": "DigiArchMaintainathon 2026 Recap",
+    "section": "What Participants Accomplished",
+    "text": "What Participants Accomplished\nDocumentation and Metadata Improvements: One of the most popular activities was adding and updating CITATION.cff files. Multiple participants added these citation files to their repositories, making it easier for others to properly credit their work.\nParticipants also focused on improving README files, which serve as the first introduction to a project. These updates included clearer installation instructions, better project overviews, and recognition of contributors.\nArchiving and Preservation: Several maintainers took advantage of GitHub’s integration with Zenodo to create permanent, citable archives of their code. The conversation touched on the importance of using professional archives rather than relying solely on commercial platforms like GitHub for long-term preservation.\nTechnical Improvements: Joe Roe worked on preparing his R package rintchron (an interface to the IntChron chronological data API) for CRAN submission, focusing on resolving outstanding issues and adapting tests for better reliability. Isak Roalkvam also fixed testing issues in the shoredate R package and expressed interest in optimizing code for better performance.\nOn a similar note, Clemens Schmid wrote a detailed blog post about integrating Futhark code into R packages, demonstrating advanced optimization techniques for computational efficiency.\nCommunity Resources: Zack Batist updated the roadmap for open-archaeo, a comprehensive list of open source archaeological software. He checked off completed items, added new tasks, and improved the document’s structure. He also called for specialists in various archaeological sub-disciplines to help identify tools in their domains of expertise.\nBjørn Peare Bartholdy began transferring projects from GitHub to Codeberg, citing better alignment with his values and concerns about GitHub’s problematic pivot to AI."
+  },
+  {
+    "objectID": "2026-recap.html#key-themes-and-best-practices-shared",
+    "href": "2026-recap.html#key-themes-and-best-practices-shared",
+    "title": "DigiArchMaintainathon 2026 Recap",
+    "section": "Key Themes and Best Practices Shared",
+    "text": "Key Themes and Best Practices Shared\nThroughout the week, organizers shared practical guidance on various maintenance topics:\nTesting and Quality Assurance: The importance of unit tests was emphasized, with Matteo Tomasini noting that testing is “the only way I can keep up a software with many moving parts” and recommending testing from the start rather than retroactively.\nContinuous Integration: The event highlighted how CI automates essential tasks like building software, testing, and generating documentation, ensuring robust software development.\nLicensing: Participants were encouraged to properly license their code, with resources provided on selecting appropriate open source licenses.\nProject Planning: The value of roadmaps was discussed—documented plans that structure future work, document features, and make development more transparent for users and potential contributors.\nCode Reviews: The community discussed how code reviews provide constructive feedback to maintainers while raising awareness of tools, creating a win-win situation for developers and users.\nFostering Community: The maintainathon emphasized recognizing contributors publicly and encouraging users to share which tools they’re using, helping developers understand their impact."
+  },
+  {
+    "objectID": "2026-recap.html#looking-forward",
+    "href": "2026-recap.html#looking-forward",
+    "title": "DigiArchMaintainathon 2026 Recap",
+    "section": "Looking Forward",
+    "text": "Looking Forward\nThe maintainathon successfully showcased the work that often goes unseen in digital archaeology: the ongoing care that maintains the code’s accessibility and long-term value. We are very happy to have organized this event, and we look forward to building upon it in the future!\nSpecial thanks to Zack Batist, Metteo Tomasini and Sophie Schmidt for leading the event, and to all members of the SSLA who helped get this off the ground."
+  },
+  {
     "objectID": "CODE_OF_CONDUCT.html",
     "href": "CODE_OF_CONDUCT.html",
     "title": "Code of Conduct",

@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Digital Archaeology Maintainathon  – Digital Archaeology Maintainathon</title>
+<title>DigiArchMaintainathon 2026 Recap – Digital Archaeology Maintainathon</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -96,7 +96,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./index.html" aria-current="page"> 
+    <a class="nav-link" href="./index.html"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
@@ -104,7 +104,7 @@ ul.task-list li input[type="checkbox"] {
 <span class="menu-text">Resources</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="./2026-recap.html"> 
+    <a class="nav-link active" href="./2026-recap.html" aria-current="page"> 
 <span class="menu-text">2026 Recap</span></a>
   </li>  
   <li class="nav-item compact">
@@ -134,9 +134,7 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title"><p>Digital Archaeology Maintainathon<br>
-</p></h1>
-<p class="subtitle lead">Let’s clean, document and revisit older code and data, together!</p>
+<h1 class="title">DigiArchMaintainathon 2026 Recap</h1>
 </div>
 
 
@@ -153,36 +151,31 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<div class="summary">
-<ol type="1">
-<li>Put in the work</li>
-<li>Post about it <a href="https://archaeo.social/tags/DigiArchMaintainathon" class="hashtag">#DigiArchMaintainathon</a></li>
-<li>Reflect and discuss</li>
-<li>That’s it!</li>
-</ol>
-</div>
-<section id="some-things-you-can-do-to-participate" class="level3 no-anchor">
-<h3 class="no-anchor" data-anchor-id="some-things-you-can-do-to-participate"><span style="color: #ab4642;"><a href="https://sslarch.github.io/maintainathon/resources">Some things you can do to participate:</a></span></h3>
-<div style=" columns: 2; -webkit-columns: 2; -moz-columns: 2;">
-<ul>
-<li>Add comments to old code or code in progress</li>
-<li>Write a better README</li>
-<li>Archive your code in long-term repository</li>
-<li>Add an open license</li>
-<li>Add a citation file to your repo</li>
-<li>Write contributor guidelines</li>
-<li>Develop a project roadmap</li>
-<li>Acknowledge contributors</li>
-<li>List your code in a community registry</li>
-<li>Write a code review</li>
-<li>Browse critical research on software development practices</li>
-<li>Donate to FOSS projects</li>
-</ul>
-</div>
-<div class="maintext">
-<p>Brought to you by the Special Interest Group for <a href="https://sslarch.github.io/"><strong>Scientific Scripting Languages in Archaeology</strong></a></p>
-<p>Got any questions or feedback? Join us in our <a href="https://archaeo.social/@CAA_SSLA">Matrix</a> chatroom or get in touch on <a href="https://archaeo.social/@CAA_SSLA">Mastodon</a>!</p>
-</div>
+<p>The CAA SSLA recently organized the Digital Archaeology Maintainathon, a week-long event (January 12-16, 2026) dedicated to maintaining and improving archaeological research software. The community came together on Mastodon and Bluesky using the <a href="https://archaeo.social/tags/DigiArchMaintainathon">#DigiArchMaintainathon</a> hashtag to learn from each other, share their progress, and celebrate the often-overlooked work of software maintenance.</p>
+<section id="what-participants-accomplished" class="level2">
+<h2 class="anchored" data-anchor-id="what-participants-accomplished">What Participants Accomplished</h2>
+<p><strong>Documentation and Metadata Improvements:</strong> One of the most popular activities was adding and updating CITATION.cff files. Multiple participants added these citation files to their repositories, making it easier for others to properly credit their work.</p>
+<p>Participants also focused on improving README files, which serve as the first introduction to a project. These updates included clearer installation instructions, better project overviews, and recognition of contributors.</p>
+<p><strong>Archiving and Preservation:</strong> Several maintainers took advantage of GitHub’s integration with Zenodo to create permanent, citable archives of their code. The conversation touched on the importance of using professional archives rather than relying solely on commercial platforms like GitHub for long-term preservation.</p>
+<p><strong>Technical Improvements:</strong> Joe Roe worked on preparing his R package <a href="https://rintchron.joeroe.io/"><code>rintchron</code></a> (an interface to the IntChron chronological data API) for CRAN submission, focusing on resolving outstanding issues and adapting tests for better reliability. Isak Roalkvam also fixed testing issues in the <a href="https://isakro.github.io/shoredate/"><code>shoredate</code></a> R package and expressed interest in optimizing code for better performance.</p>
+<p>On a similar note, Clemens Schmid wrote <a href="https://nevrome.de/blog/posts/2026-01-12-futhark-in-ggpointgrid.html">a detailed blog post</a> about integrating Futhark code into R packages, demonstrating advanced optimization techniques for computational efficiency.</p>
+<p><strong>Community Resources:</strong> Zack Batist updated the roadmap for <a href="https://open-archaeo.info/">open-archaeo</a>, a comprehensive list of open source archaeological software. He checked off completed items, added new tasks, and improved the document’s structure. He also called for specialists in various archaeological sub-disciplines to help identify tools in their domains of expertise.</p>
+<p>Bjørn Peare Bartholdy began transferring projects from GitHub to Codeberg, citing better alignment with his values and concerns about GitHub’s problematic pivot to AI.</p>
+</section>
+<section id="key-themes-and-best-practices-shared" class="level2">
+<h2 class="anchored" data-anchor-id="key-themes-and-best-practices-shared">Key Themes and Best Practices Shared</h2>
+<p>Throughout the week, organizers shared practical guidance on various maintenance topics:</p>
+<p><strong>Testing and Quality Assurance:</strong> The importance of unit tests was emphasized, with Matteo Tomasini noting that testing is “the only way I can keep up a software with many moving parts” and recommending testing from the start rather than retroactively.</p>
+<p><strong>Continuous Integration:</strong> The event highlighted how CI automates essential tasks like building software, testing, and generating documentation, ensuring robust software development.</p>
+<p><strong>Licensing:</strong> Participants were encouraged to properly license their code, with resources provided on selecting appropriate open source licenses.</p>
+<p><strong>Project Planning:</strong> The value of roadmaps was discussed—documented plans that structure future work, document features, and make development more transparent for users and potential contributors.</p>
+<p><strong>Code Reviews:</strong> The community discussed how code reviews provide constructive feedback to maintainers while raising awareness of tools, creating a win-win situation for developers and users.</p>
+<p><strong>Fostering Community:</strong> The maintainathon emphasized recognizing contributors publicly and encouraging users to share which tools they’re using, helping developers understand their impact.</p>
+</section>
+<section id="looking-forward" class="level2">
+<h2 class="anchored" data-anchor-id="looking-forward">Looking Forward</h2>
+<p>The maintainathon successfully showcased the work that often goes unseen in digital archaeology: the ongoing care that maintains the code’s accessibility and long-term value. We are very happy to have organized this event, and we look forward to building upon it in the future!</p>
+<p>Special thanks to Zack Batist, Metteo Tomasini and Sophie Schmidt for leading the event, and to all members of the SSLA who helped get this off the ground.</p>
 
 
 </section>
