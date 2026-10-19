@@ -1,0 +1,18 @@
+---
+title: "Resources"
+toc: false
+highlight-style: github
+format:
+  html:
+    grid:
+      margin-width: 250px
+      sidebar-width: 250px
+listing:
+  contents: "*.qmd"
+  type: grid
+  categories: true
+  sort: title
+  fields: [title, description, categories]
+---
+
+Guides for cleaning, documenting and revisiting older code and data.

@@ -1,0 +1,21 @@
+---
+title: "Post a code of conduct"
+description: "Set expectations for behaviour and write a plan for enforcing them."
+categories: [Community]
+---
+
+A code of conduct demonstrates that you are able to foster a warm and welcoming community.
+They accomplish this by encouraging ethical and inclusive behaviour and by establishing parameters for a collaborative, respectful and safe work environment.
+
+A code of conduct also needs to be enforceable.
+It is therefore also necessary to include a response plan that outlines how incidents should be reported and documented, who will receive and handle these incidents, how incidents will be investigated and resolved, and how appeals and conflicts of interests will be handled.
+
+Codes of conduct are often specified in a [CODE_OF_CONDUCT.md file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project).
+The Good Docs Project has written extensively about [codes of conduct](https://www.thegooddocsproject.dev/template/code-of-conduct), and has also provided templates documents for [codes of conduct](https://gitlab.com/tgdp/templates/-/blob/main/code-of-conduct/template_code-of-conduct.md), [response plans](https://gitlab.com/tgdp/templates/-/blob/main/code-of-conduct-response-plan/template_code-of-conduct-response-plan.md), and means of documenting and investigating incidents.
+
+## Further reading
+
+- [GitHub Docs: Adding a code of conduct to your project](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-code-of-conduct-to-your-project)
+- [The Good Docs Project: Code of conduct template](https://www.thegooddocsproject.dev/template/code-of-conduct)
+- [The Good Docs Project: Code of conduct response plan template](https://gitlab.com/tgdp/templates/-/blob/main/code-of-conduct-response-plan/template_code-of-conduct-response-plan.md)
+- [Reading list](../reading.qmd)

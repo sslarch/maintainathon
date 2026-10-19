@@ -1,0 +1,15 @@
+---
+title: "Acknowledge contributors"
+description: "Describe how each person helped, in your README and wherever you share the work."
+categories: [Community]
+---
+
+Open source projects thrive based on community support, and acknowledging contributors is a great way to maintain enthusiasm among the team. This can be done in the README, on social media, and in any other venue where you share your work (journal articles, conference presentations, etc).
+
+When acknowledging the people behind the code, be sure to describe **_how_** people contribute, including specific things they've done to move the project forward.
+
+Highlighting the roles of contributors coming from under-represented backgrounds may also help foster more inclusive developer communities, which is great for enhancing the quality of both communities and codebases.
+
+## Further reading
+
+- [Reading list](../reading.qmd)

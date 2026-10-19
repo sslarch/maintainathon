@@ -1,0 +1,20 @@
+---
+title: "Develop a project roadmap"
+description: "Turn intentions into tasks with tangible, measurable outcomes."
+categories: [Plan]
+---
+
+It may be helpful to develop a plan of action to structure future work. Some factors to consider include:
+
+- What features are on the horizon?
+- What steps need to be taken to achieve them?
+- What resources will be needed to ensure effective action?
+- Who can I call on for support?
+
+Effective roadmaps have tangible and measurable outcomes, and are comprised of tasks that can actually be acted upon.
+See [this resource](https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development) for some great tips on how to write great roadmaps.
+
+## Further reading
+
+- [Creating a comprehensive open source project roadmap](https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development)
+- [Reading list](../reading.qmd)

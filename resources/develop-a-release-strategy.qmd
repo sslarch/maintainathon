@@ -1,0 +1,21 @@
+---
+title: "Develop a release strategy"
+description: "Choose SemVer, AltVer or CalVer and tag a release users can rely on."
+categories: [Preserve and release]
+---
+
+Sharing code as a series of stable releases makes it easier to share code with predictable functionality. As new features are implemented or when the codebase changes in substantial ways, the software should be rolled into a new release. This enhances clarity for what users can expect when they download a specific release. It also makes it easier to communicate and de-bug issues raised by users by ensuring that all parties are accessing the same codebase.
+
+There are [numerous schemes](https://nesbitt.io/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html) for releasing code, which enable developers to communicate the degree of changes made between versions. Some of these include:
+
+- [Semantic Versioning](https://semver.org/): Major, Minor or Patch versions indicate breaking changes relative to prior versions.
+- [Alternative Versioning (AltVer)](https://altver.org/): Tracks implementation of major overhauls, new features, and careful maintenance.
+- [Calendar Versioning (CalVer)](https://calver.org/): For "rolling" releases that follow a regular maintenance cycle.
+
+## Further reading
+
+- [Semantic Versioning](https://semver.org/)
+- [Alternative Versioning (AltVer)](https://altver.org/)
+- [Calendar Versioning (CalVer)](https://calver.org/)
+- [From ZeroVer to SemVer: a comprehensive list of versioning schemes in open source](https://nesbitt.io/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html)
+- [Reading list](../reading.qmd)

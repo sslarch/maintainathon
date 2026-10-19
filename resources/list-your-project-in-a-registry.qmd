@@ -1,0 +1,18 @@
+---
+title: "List your project in a registry"
+description: "Make your work findable through open-archaeo and similar community lists."
+categories: [Community]
+---
+
+It may be beneficial to include your project in a community registry to ensure that the work is findable and accessible by target audiences.
+
+Archaeologists may consider reaching out to [open-archaeo.info](https://open-archaeo.info/), which is a list of open source software and resources developed by and for archaeologists. [AncientMetagenomeDir](https://www.spaam-community.org/AncientMetagenomeDir/#/) is a similar resource specializing on tools developed in support of ancient DNA research.
+
+Additionally, the [archaeology CRAN task view](https://github.com/benmarwick/ctv-archaeology) lists numerous studies that include publicly accessible R code, which is a great resource for understanding how the community uses R in their research.
+
+## Further reading
+
+- [open-archaeo](https://open-archaeo.info/)
+- [AncientMetagenomeDir](https://www.spaam-community.org/AncientMetagenomeDir/#/)
+- [Archaeology CRAN task view](https://github.com/benmarwick/ctv-archaeology)
+- [Reading list](../reading.qmd)

@@ -1,0 +1,20 @@
+---
+title: "Write a better README"
+description: "Give a newcomer what they need to understand and run your code."
+categories: [Document]
+---
+
+A README is a plaintext file that includes a detailed description of a project. It's typically located in the root directory, and often includes:
+
+- A broad overview of what the project does, why it was made, and the rationale behind the way it was implemented
+- Instructions for how to install or run the code
+- Links to other related tools or resources
+- Recognition of various contributors
+- Status updates, feature roadmaps, and an overview of the project's overall orientation
+
+[makeareadme.com](https://www.makeareadme.com/) is a great resource that provides advice for writing clear and helpful readmes, including a template that you may adapt for your own purposes.
+
+## Further reading
+
+- [Make a README](https://www.makeareadme.com/)
+- [Reading list](../reading.qmd)

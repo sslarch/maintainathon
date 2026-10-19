@@ -1,0 +1,42 @@
+---
+title: "Open issues"
+description: "Report bugs in other projects well, and track your own to-do list in public."
+categories: [Plan]
+---
+
+Most source code hosting platforms ([like GitHub](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)) allow users to open 'issues', 'tickets' or 'bug reports' in repositories.
+An issue can report a bug (a feature of the software not working as documented and/or expected), a missing feature, or a suggested change.
+Creating issues in other people's repositories is a valuable contribution that is usually welcomed by the authors of the software.
+Don't assume that, if you encounter a problem with open source software, then someone must already be aware of it -- you might well be the first to encounter it, or at least the first to report it!
+
+There are many [guides to writing helpful issues](https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f) and some projects ask for them in a very specific format, often providing a template.
+Here is some basic advice that will work for most open source projects:
+
+* Always search through existing issues (open and closed) to see if it has already been reported. If so, it is rarely necessary to create a new issue -- one exception is if the issue is 'closed' because the problem was fixed, but has re-emerged.
+* Check if the repository has any specific guidance for issues, e.g. some projects only accept issues reporting bugs, with feature requests directed elsewhere.
+* Give a concise but helpful issue title, e.g. "Cannot do X with Y if Z" not "Problem with Y"
+* Be concise but thorough in the issue body, describing a) what you expected to happen, b) what actually happened, and c) any suggestions you have for how to fix it. 
+* For bug reports, always give a [minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example).
+
+Note that requests for support---asking how to do something with software, not reporting a problem or missing feature---are generally not appreciated as issues.
+They can sometimes be reframed as issues in documentation, however, e.g. "Missing/unclear documentation on X" not "how do I do X?"
+
+You may experience that the response to your issue by the maintainer of the software is somewhat 'direct', or even impolite.
+This is unfortunately quite common, but usually unintentional.
+It partly reflects a longstanding tradition in the open source world for a direct, 'shop-floor' communication style without markers of politeness that you might expect in e.g. academia.
+
+### Open issues in your own repositories
+
+You can also of course create issues in your own repositories.
+This can be an effective way of managing your own work, as the issues serve as a 'to-do list' and on many platforms can be organised into various project management tools.
+Managing development publicly in this way has several advantages:
+it allows users to judge the state of development of the software (e.g. is it finished or are a lot of new features still planned);
+it means users can see if you're already aware of an issue, before reporting it themselves;
+others may be motivated to contributed to solving the problem for you (see below on how to encourage collaboration).
+
+## Further reading
+
+- [GitHub Docs: Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)
+- [Writing a proper GitHub issue](https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f)
+- [Stack Overflow: Minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
+- [Reading list](../reading.qmd)

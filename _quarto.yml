@@ -24,7 +24,9 @@ website:
     - text: "Home"
       href: index.qmd
     - text: "Resources"
-      href: resources.qmd
+      href: resources/index.qmd
+    - text: "Reading list"
+      href: reading.qmd
     - text: "2026 Recap"
       href: 2026-recap.qmd
     - icon: github

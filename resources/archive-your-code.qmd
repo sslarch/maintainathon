@@ -1,0 +1,25 @@
+---
+title: "Archive your code"
+description: "Deposit a snapshot in Zenodo or Software Heritage, and retire abandoned repositories."
+categories: [Preserve and release]
+---
+
+While commercial platforms like GitHub and GitLab may provide very useful collaboration features, they should not be trusted as long-term stewards of software or data. Professional archives should instead be used to backup public-facing code repositories.
+
+[Zenodo](https://zenodo.org/) is a general-purpose open repository developed under the European OpenAIRE program and operated by CERN, which allows researchers to deposit research papers, data sets, research software, reports, and any other research related digital artefacts. One of its key features is direct [integration with GitHub](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content), and once configured, saves a snapshot of each release. For each submission, a persistent digital object identifier (DOI) is minted.
+
+[Software Heritage](https://www.softwareheritage.org/) is another archive dedicated to preserving publicly accessible code. It regularly crawls several software forges and package indexes, and anyone can [upload their own repositories](https://archive.softwareheritage.org/save/) too.
+
+## Archive abandoned projects
+It may be prudent to acknowledge when it's time to tuck a project away and mark it as [archived](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories). This will put a banner on your repo and restrict any new pull requests.
+
+If a project has been picked up by others, or the work continues in another forum, make sure to provide a link in the original README!
+
+## Further reading
+
+- [Zenodo](https://zenodo.org/)
+- [GitHub Docs: Referencing and citing content](https://docs.github.com/en/repositories/archiving-a-github-repository/referencing-and-citing-content)
+- [Software Heritage](https://www.softwareheritage.org/)
+- [Software Heritage: Save code now](https://archive.softwareheritage.org/save/)
+- [GitHub Docs: Archiving repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)
+- [Reading list](../reading.qmd)

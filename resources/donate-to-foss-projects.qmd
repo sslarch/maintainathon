@@ -1,0 +1,13 @@
+---
+title: "Donate to FOSS projects"
+description: "Compensate the maintainers of the tools you use most."
+categories: [Community]
+---
+
+While many archaeologists who write code do benefit from a stable income, many do not. In fact, archaeologists who write code tend to be precariously employed. Even a small donation shows deep appreciation, and can help motivate labour performed largely by volunteers.
+
+If you are able to provide financial support, please reach out to the maintainers of your most-used tools to help compensate them for their labour!
+
+## Further reading
+
+- [Reading list](../reading.qmd)

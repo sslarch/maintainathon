@@ -1,0 +1,33 @@
+---
+title: "Add a citation file"
+description: "A CITATION.cff lets reference managers and GitHub cite your software correctly."
+categories: [Preserve and release]
+---
+
+A [cff file](https://citation-file-format.github.io/) is a plaintext file with .cff extension containing information that can be picked up by a reference manager to generate clean citations. It follows a yaml format, which is both human- and machine-readable.
+
+See the example below from Maddison Simon's and Sophie Schmidt's [Percopackage](https://github.com/SCSchmidt/percopackage/) for some common information to include in your cff:
+
+```yaml
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+authors:
+  - family-names: Maddison
+    given-names: M. Simon
+    orcid: https://orcid.org/0000-0001-5006-6604
+  - family-names: Schmidt
+    given-names: Sophie C.
+    orcid: https://orcid.org/0000-0003-4696-2101
+title: "Percopackage"
+version: 0.0.0.9001
+identifiers:
+  - type: doi
+    value: 10.17605/OSF.IO/7EXTC
+date-released: 2024-08-24
+```
+
+## Further reading
+
+- [Citation File Format](https://citation-file-format.github.io/)
+- [Percopackage](https://github.com/SCSchmidt/percopackage/)
+- [Reading list](../reading.qmd)

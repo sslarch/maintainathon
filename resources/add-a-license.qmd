@@ -1,0 +1,20 @@
+---
+title: "Add a license"
+description: "Decide what others may do with your code, data and documentation."
+categories: [Preserve and release]
+---
+
+Licenses describe legal rights for accessing, using and modifying code. Open licenses, which enable widespread and uninhibited use, are increasingly common, however copyleft or opinionated licenses impose restrictions that add conditions based on specific use-cases. For instance, [CC-NC limits reuse to non-commercial applications](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation), [copyleft](https://en.wikipedia.org/wiki/Copyleft) forces downstream applications to adopt an equally permissive license for any derivative works, and numerous other licenses are aligned with specific social causes. [The Hippocratic License hosts a tool](https://firstdonoharm.dev/build/) for creating a custom license, including explicit allowances and restrictions for various potential use-cases, such as a Fossil Fuel Divestment module, a Law Enforcement module, and a Supply Chain Transparency module.
+
+Visit [choosealicense.com](https://choosealicense.com/) for an extremely detailed survey and comparison of various software and non-software licenses. There is also a page [describing what happens if you don't choose a license](https://choosealicense.com/no-permission/).
+
+Note that software licenses are often distinct from licenses intended for non-software materials, such as data, media, documentation and fonts.
+
+## Further reading
+
+- [choosealicense.com](https://choosealicense.com/)
+- [What happens if you don't choose a license](https://choosealicense.com/no-permission/)
+- [Hippocratic License builder](https://firstdonoharm.dev/build/)
+- [Creative Commons: NonCommercial interpretation](https://wiki.creativecommons.org/wiki/NonCommercial_interpretation)
+- [Copyleft (Wikipedia)](https://en.wikipedia.org/wiki/Copyleft)
+- [Reading list](../reading.qmd)

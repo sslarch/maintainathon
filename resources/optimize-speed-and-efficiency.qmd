@@ -1,0 +1,31 @@
+---
+title: "Optimize speed and efficiency"
+description: "Profile first, then fix the few code paths that cost the most."
+categories: [Technical]
+---
+
+Software should run as fast and efficiently as possible. More speed and lower memory and storage requirements are obviously beneficial for yourself and your users. They also lead to lower consumption of the strained, finite resources of our planet. Most importantly, though, higher efficiency can bring about a qualitative difference both in who uses your software, and for what: A script that requires a high performance computing environment is naturally non-reproducible for a user without access to such intensive resources. More people can run fast software with small memory footprint. A script that runs slowly makes it much harder to integrate it in extensive workflows or explore a potential parameter space through thousands of reruns (e.g. with crossvalidation or jackknife resampling). Additionally, software allows new, often unforeseen applications, and better algorithmic and software performance indeed enabled major advancements in tool driven scientific progress (as with [Krauss 2025](https://doi.org/10.1057/s41599-025-05797-6), [Sherry & Thompson 2021](https://doi.org/10.1109/JPROC.2021.3107219)).
+
+So how to improve the runtime performance of a given script or software tool? Unfortunately there is no universal answer. It depends on the exact goals, constraints and environments for which and where it is applied. Generally the following initial steps should be undertaken, if you already have code that "does the job":
+
+1. [Setup tests](#test-your-codes-functionality) to make sure that the output stays as expected, even if you experiment with changes to improve the performance.
+2. Setup a performance test environment to reliably observe differences in time and memory requirements under realistic conditions.
+3. Run profiling suitable for your development stack (programming language, compiler, environment) with realistic test data to identify cost centers, so the performance-critical parts of your code.
+
+With such a setup you can then attempt to apply changes to speed up your code. What exactly you can and should do depends very much on your stack. A quick google search will certainly yield good advice on how to write fast code in a given language. Here is some universal advice that applies almost always and beyond these specifics:
+
+- Use the right algorithms and data structures. This is the single most important thing to look for, because it can easily improve performance by orders of magnitudes. Many abstract problems have been solved extremely efficiently by computer scientists, like e.g. finding the shortest path in a network ([Dijkstra's algorithm](https://en.wikipedia.org/wiki/Dijkstra%27s_algorithm)) or sorting a list ([Quicksort](https://en.wikipedia.org/wiki/Quicksort)). It is absolutely worth to invest some time to understand your concrete problem on an abstract level, to identify the best known core algorithm.
+- Rely on established, fast implementations in software libraries. Writing efficient code is hard. Fortunately there are many excellent open source software libraries that solve common tasks very well, e.g. matrix and linear algebra computations ([OpenBLAS](http://www.openmathlib.org/OpenBLAS/)). Check if you can make use of that for your particular usecase.
+- Focus on critical code sections. A famous quote by Donald E. Knuth expresses this notion very well:
+  
+  > "Programmers waste enormous amounts of time thinking about, or worrying about, the speed of noncritical parts of their programs, and these attempts at efficiency actually have a strong negative impact when debugging and maintenance are considered. We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%." ([Knuth 1974](https://pic.plover.com/knuth-GOTO.pdf)).
+  
+  Optimizing code is fun, but a huge time sink. Think critically if and where this investment pays off.
+
+## Further reading
+
+- [Krauss 2025](https://doi.org/10.1057/s41599-025-05797-6)
+- [Sherry & Thompson 2021](https://doi.org/10.1109/JPROC.2021.3107219)
+- [Knuth 1974](https://pic.plover.com/knuth-GOTO.pdf)
+- [OpenBLAS](http://www.openmathlib.org/OpenBLAS/)
+- [Reading list](../reading.qmd)

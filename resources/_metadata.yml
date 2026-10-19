@@ -1,0 +1,9 @@
+toc: true
+toc-depth: 3
+toc-expand: true
+highlight-style: oblivion
+format:
+  html:
+    grid:
+      margin-width: 400px
+      sidebar-width: 1000px

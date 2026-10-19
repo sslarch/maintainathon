@@ -1,0 +1,5 @@
+---
+title: "Reading list"
+bibliography: references.bib
+nocite: '@*'
+---
