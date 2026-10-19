@@ -1,0 +1,52 @@
+// Base styles
+
+#quarto-content { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+#title-block-header { padding: 56px 0 24px; border-bottom: 0; }
+.quarto-title-block hr, #title-block-header + hr { display: none; }
+h1.title {
+  font-size: 58px;
+  line-height: 1.04;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.quarto-title-block .description, .quarto-title .subtitle { color: $muted; font-size: 21px; line-height: 1.5; margin: 18px 0 0; opacity: 1; }
+.quarto-title-meta-heading, .quarto-title-meta-contents { font-family: $font-label; font-size: 13px; }
+
+#title-block-header .description, #title-block-header .subtitle { margin-top: 18px !important; }
+h1.title { margin-bottom: 0; }
+
+main h2 {
+  font-size: 30px;
+  line-height: 1.15;
+  border-bottom: 0;
+  margin-top: 44px;
+}
+main h3 { font-size: 22px; }
+
+#TOC, #quarto-sidebar-toc-left { font-size: 15px; }
+#toc-title {
+  font-family: $font-label;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+#TOC .nav-link { color: $muted; }
+#TOC .nav-link.active { color: $ink; font-weight: 600; border-left-color: $green; }
+
+div.sourceCode, pre.sourceCode, pre {
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.7;
+}
+pre.sourceCode { padding: 20px; }
+
+// Inline code
+#quarto-document-content :not(pre) > code:not(.sourceCode) {
+  background: rgba(127, 127, 127, 0.16);
+  color: $ink;
+  padding: 0.1em 0.35em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}

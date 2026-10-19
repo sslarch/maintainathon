@@ -2,6 +2,7 @@
 title: "Set up continuous integration"
 description: "Run tests and build documentation automatically with GitHub Actions."
 categories: [Technical]
+order: 17
 ---
 
 Continuous integration (CI) refers to the process of automating tasks pertaining to the integration of changes and new features into existing software. The automatization process can be setup for different tasks such as building a software, testing, generating documentation, or producing accessible outputs deriving from the codebase. One notable aspect of CI is that they can be triggered by changes in the codebase, which can effectively automate one's testing environment and documentation-writing processes, ensuring robust software development.
@@ -17,11 +18,11 @@ By setting up the correct Github Action (or whatever other tool you are using --
 
 To set up an automatic Github action, one needs to go in the repository of the project and click on Actions, then click on "New Workflow".
 
-![](images/github_actions_new-workflow.png)
+![](../images/github_actions_new-workflow.png)
 
 Then, select the action you would like to set up. As an example, to set up automated testing on a Python software, you would choose "Python Application".
 
-![](images/github_actions_application.png)
+![](../images/github_actions_application.png)
 
 This will create a yaml script in a `.github/workflows` folder, that can be modified to correspond to one's own needs. One of the most straightforward ways to use Github Actions is to use it so that tests are run everytime you push a code (see section about testing, above), instead of having to run tests manually. For example, in the following file, the Github Action will perform three actions in order to test a code written in Python: 
 
@@ -116,13 +117,3 @@ Additionally, CI is useful for orchestrating the interaction of different pieces
 This is typically accomplishing using GNU [Make](https://www.gnu.org/software/make/), a tool that controls how a software will run from a series of source code files. To do this, one can use a [`makefile`](https://makefiletutorial.com/), a file that dictates how different pieces of a pipeline interact. While Make is typically operating on languages that need building (think C and C++), other languages have their own tools doing the same thing, such as Snakemake (for Python) and the library [MakefileR](https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html) (for R).
 
 For a distinctively archaeological perspective, consider reading Clemens Schmidt's [reflection](https://nevrome.de/blog/posts/2021-12-05-shake-I.html) on [his use](https://nevrome.de/blog/posts/2021-12-05-shake-II.html) of Haskell's version of Make (Shake) for his archaeoinformatics research.
-
-## Further reading
-
-- [GitHub Actions marketplace](https://github.com/marketplace?type=actions)
-- [GitHub Docs: Managing a branch protection rule](https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule)
-- [GNU Make](https://www.gnu.org/software/make/)
-- [Makefile Tutorial](https://makefiletutorial.com/)
-- [An Introduction to MakefileR](https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html)
-- [Clemens Schmidt on Shake, part 1](https://nevrome.de/blog/posts/2021-12-05-shake-I.html)
-- [Clemens Schmidt on Shake, part 2](https://nevrome.de/blog/posts/2021-12-05-shake-II.html)

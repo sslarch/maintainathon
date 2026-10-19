@@ -1,0 +1,38 @@
+/*-- scss:defaults --*/
+
+// Palette (light)
+$ink: #16211C;
+$muted: #4B5A53;
+$line: #D5DBD6;
+$paper: #F3F5F2;
+$card: #FFFFFF;
+$green: #0B5D4B;
+$green-dark: #06392d;
+$on-ink: #FFFFFF;
+$bar-bg: #16211C;
+$code-bg: #0F1814;
+$code-fg: #E6EDE9;
+
+// Bootstrap variables
+$body-bg: $paper;
+$body-color: $ink;
+$link-color: #0B5D4B;
+$link-hover-color: $green-dark;
+
+$font-family-sans-serif: "Source Sans 3", system-ui, sans-serif;
+$font-family-monospace: "Source Code Pro", ui-monospace, monospace;
+$font-label: "Source Sans 3", system-ui, sans-serif;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$headings-font-weight: 700;
+$headings-color: $ink;
+
+$navbar-bg: $card;
+$navbar-fg: $ink;
+$navbar-hl: $green;
+
+$code-block-bg: $code-bg;
+$code-block-color: $code-fg;
+
+/*-- scss:rules --*/
+
+@import "site";

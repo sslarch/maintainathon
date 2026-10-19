@@ -11,8 +11,30 @@ listing:
   contents: "*.qmd"
   type: grid
   categories: true
-  sort: title
+  sort: order
   fields: [title, description, categories]
 ---
 
 Guides for cleaning, documenting and revisiting older code and data.
+
+```{=html}
+<script>
+(function () {
+  var label = document.createElement("p");
+  label.className = "guide-count";
+  label.setAttribute("role", "status");
+  function update() {
+    var items = document.querySelectorAll(".quarto-listing .list > *");
+    var n = 0;
+    items.forEach(function (i) { if (i.offsetParent !== null) n++; });
+    label.textContent = n + (n === 1 ? " guide" : " guides");
+  }
+  window.addEventListener("load", function () {
+    var chips = document.querySelector(".quarto-listing-category");
+    if (chips) { chips.appendChild(label); var all = chips.querySelector(".category"); if (all) all.classList.add("active"); }
+    update();
+    document.addEventListener("click", function () { setTimeout(update, 100); });
+  });
+})();
+</script>
+```

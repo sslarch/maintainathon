@@ -1,0 +1,135 @@
+// Resources styles
+
+.quarto-listing-category-title { display: none; }
+#quarto-margin-sidebar .quarto-listing-category {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding: 20px 0 28px !important;
+  border-top: 1px solid $line;
+  margin-bottom: 0;
+}
+.quarto-listing-category .category {
+  margin: 0;
+  padding: 7px 14px;
+  background: $card;
+  border: 1px solid $line;
+  border-radius: 999px;
+  color: $ink;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+}
+.quarto-listing-category .category:hover { border-color: $green; }
+.quarto-listing-category .category.active,
+.quarto-listing-category .category[aria-pressed="true"] {
+  background: $ink;
+  border-color: $ink;
+  color: $on-ink;
+}
+.quarto-listing-category .category .category-count,
+.quarto-listing-category .category span {
+  font-family: $font-label;
+  font-size: 12px;
+  margin-left: 4px;
+}
+
+.quarto-listing-grid, .quarto-listing .grid { gap: 16px; }
+.quarto-grid-item.card, .card.h-100 {
+  background: $card;
+  border: 1px solid $line;
+  border-radius: 10px;
+  box-shadow: none;
+  transition: none;
+}
+.quarto-grid-item.card:hover, .card.h-100:hover {
+  border-color: $green;
+  box-shadow: 0 2px 0 $green;
+}
+.quarto-grid-item .card-body { padding: 20px; display: flex; flex-direction: column; gap: 10px; }
+.quarto-grid-item .listing-categories {
+  order: -1;
+  font-family: $font-label;
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: $muted;
+}
+.quarto-grid-item .listing-categories .listing-category {
+  border: 0 !important;
+  padding: 0 !important;
+  background: transparent !important;
+  color: $muted !important;
+  font-size: 12px;
+  cursor: inherit;
+}
+.quarto-grid-item .listing-category::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  margin-right: 8px;
+  background: $green;
+}
+.quarto-grid-item .listing-title, .quarto-grid-item .card-title {
+  font-family: $headings-font-family;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 1.18;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+.quarto-grid-item .card-text, .quarto-grid-item .listing-description {
+  font-size: 15px;
+  line-height: 1.5;
+  color: $muted;
+}
+
+#quarto-content:has(.quarto-listing-category) {
+  display: flex;
+  flex-direction: column;
+}
+#quarto-content:has(.quarto-listing-category) > main { display: contents; }
+#quarto-content:has(.quarto-listing-category) #title-block-header { order: 1; }
+#quarto-content:has(.quarto-listing-category) main > p { order: 2; font-size: 19px; color: $muted; }
+#quarto-content:has(.quarto-listing-category) #quarto-margin-sidebar { order: 3; width: 100%; max-width: none; position: static; padding: 0; }
+#quarto-content:has(.quarto-listing-category) .quarto-listing { order: 4; }
+#quarto-content:has(.quarto-listing-category) #quarto-sidebar-glass { display: none; }
+
+#quarto-content:has(.eyebrow) > main > p.eyebrow { order: 0; }
+#quarto-content:has(.eyebrow) #title-block-header { padding-top: 14px; }
+.eyebrow {
+  margin: 56px 0 0;
+  font-family: $font-label;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+.quarto-listing-category .category[data-category=""] { order: 0; }
+.quarto-listing-category .category[data-category="RG9jdW1lbnQ="] { order: 1; }
+.quarto-listing-category .category[data-category="UHJlc2VydmUlMjBhbmQlMjByZWxlYXNl"] { order: 2; }
+.quarto-listing-category .category[data-category="UGxhbg=="] { order: 3; }
+.quarto-listing-category .category[data-category="Q29tbXVuaXR5"] { order: 4; }
+.quarto-listing-category .category[data-category="VGVjaG5pY2Fs"] { order: 5; }
+.quarto-listing-category .guide-count {
+  order: 9;
+  margin: 0 0 0 auto;
+  align-self: center;
+  font-family: $font-label;
+  font-size: 14px;
+  color: $muted;
+}
+
+// Category dot colours
+$category-dots: (
+  "RG9jdW1lbnQ=": #C2693A,
+  "UHJlc2VydmUlMjBhbmQlMjByZWxlYXNl": #B08A2E,
+  "UGxhbg==": #4C7A5A,
+  "Q29tbXVuaXR5": #7A5C9E,
+  "VGVjaG5pY2Fs": #2B6C8F
+);
+@each $key, $colour in $category-dots {
+  .quarto-grid-item .listing-category[onclick*="'#{$key}'"]::before { background: $colour; }
+}
