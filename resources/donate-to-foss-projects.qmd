@@ -10,4 +10,3 @@ If you are able to provide financial support, please reach out to the maintainer
 
 ## Further reading
 
-- [Reading list](../reading.qmd)

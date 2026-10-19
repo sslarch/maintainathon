@@ -12,4 +12,3 @@ Highlighting the roles of contributors coming from under-represented backgrounds
 
 ## Further reading
 
-- [Reading list](../reading.qmd)

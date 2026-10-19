@@ -15,4 +15,3 @@ Additionally, the [archaeology CRAN task view](https://github.com/benmarwick/ctv
 - [open-archaeo](https://open-archaeo.info/)
 - [AncientMetagenomeDir](https://www.spaam-community.org/AncientMetagenomeDir/#/)
 - [Archaeology CRAN task view](https://github.com/benmarwick/ctv-archaeology)
-- [Reading list](../reading.qmd)

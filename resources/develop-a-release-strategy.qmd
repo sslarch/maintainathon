@@ -18,4 +18,3 @@ There are [numerous schemes](https://nesbitt.io/2024/06/24/from-zerover-to-semve
 - [Alternative Versioning (AltVer)](https://altver.org/)
 - [Calendar Versioning (CalVer)](https://calver.org/)
 - [From ZeroVer to SemVer: a comprehensive list of versioning schemes in open source](https://nesbitt.io/2024/06/24/from-zerover-to-semver-a-comprehensive-list-of-versioning-schemes-in-open-source.html)
-- [Reading list](../reading.qmd)

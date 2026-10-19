@@ -28,4 +28,3 @@ With such a setup you can then attempt to apply changes to speed up your code. W
 - [Sherry & Thompson 2021](https://doi.org/10.1109/JPROC.2021.3107219)
 - [Knuth 1974](https://pic.plover.com/knuth-GOTO.pdf)
 - [OpenBLAS](http://www.openmathlib.org/OpenBLAS/)
-- [Reading list](../reading.qmd)

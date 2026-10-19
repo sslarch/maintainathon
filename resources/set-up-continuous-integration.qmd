@@ -126,4 +126,3 @@ For a distinctively archaeological perspective, consider reading Clemens Schmidt
 - [An Introduction to MakefileR](https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html)
 - [Clemens Schmidt on Shake, part 1](https://nevrome.de/blog/posts/2021-12-05-shake-I.html)
 - [Clemens Schmidt on Shake, part 2](https://nevrome.de/blog/posts/2021-12-05-shake-II.html)
-- [Reading list](../reading.qmd)

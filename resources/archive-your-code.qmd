@@ -22,4 +22,3 @@ If a project has been picked up by others, or the work continues in another foru
 - [Software Heritage](https://www.softwareheritage.org/)
 - [Software Heritage: Save code now](https://archive.softwareheritage.org/save/)
 - [GitHub Docs: Archiving repositories](https://docs.github.com/en/repositories/archiving-a-github-repository/archiving-repositories)
-- [Reading list](../reading.qmd)

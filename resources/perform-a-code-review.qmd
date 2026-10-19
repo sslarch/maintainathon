@@ -15,4 +15,3 @@ This journal also published [Recommendations for the review of archaeological re
 - [Journal of Open Source Software](https://joss.theoj.org/about)
 - [Thiery et al. 2022](https://doi.org/10.11588/ai.2022.1.95272)
 - [Recommendations for the review of archaeological research software](https://doi.org/10.11588/ai.2020.1.81423)
-- [Reading list](../reading.qmd)

@@ -17,4 +17,3 @@ See [this resource](https://open-innovation-projects.org/blog/creating-a-compreh
 ## Further reading
 
 - [Creating a comprehensive open source project roadmap](https://open-innovation-projects.org/blog/creating-a-comprehensive-open-source-project-roadmap-a-step-by-step-guide-for-successful-development)
-- [Reading list](../reading.qmd)

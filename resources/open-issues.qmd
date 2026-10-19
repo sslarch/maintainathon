@@ -39,4 +39,3 @@ others may be motivated to contributed to solving the problem for you (see below
 - [GitHub Docs: Creating an issue](https://docs.github.com/en/issues/tracking-your-work-with-issues/using-issues/creating-an-issue)
 - [Writing a proper GitHub issue](https://medium.com/nyc-planning-digital/writing-a-proper-github-issue-97427d62a20f)
 - [Stack Overflow: Minimal reproducible example](https://stackoverflow.com/help/minimal-reproducible-example)
-- [Reading list](../reading.qmd)

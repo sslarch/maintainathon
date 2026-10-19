@@ -16,4 +16,3 @@ The Good Docs Project has written about the value of [contributing guidelines](h
 - [GitHub Docs: Setting guidelines for repository contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
 - [The Good Docs Project: Contributing guide](https://www.thegooddocsproject.dev/template/contributing-guide)
 - [Contributing guide template](https://gitlab.com/tgdp/templates/-/blob/main/contributing-guide/template_contributing-guide.md)
-- [Reading list](../reading.qmd)

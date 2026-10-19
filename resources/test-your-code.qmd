@@ -76,4 +76,3 @@ Done! We now wrote two *unit tests* (even though one of them will fail miserably
 - [R Packages: Testing basics](https://r-pkgs.org/testing-basics.html)
 - [Real Python: Getting Started With Testing in Python](https://realpython.com/python-testing/)
 - [GeeksforGeeks: Unit testing and integration testing](https://www.geeksforgeeks.org/software-engineering/difference-between-unit-testing-and-integration-testing/)
-- [Reading list](../reading.qmd)

@@ -167,4 +167,3 @@ interpolate_curve <- function(target,
 - [How to Write Professional Code Comments: A Beginner's Guide to Better Code Documentation](https://dev.to/anurag_dev/how-to-write-professional-code-comments-a-beginners-guide-to-better-code-documentation-27hf)
 - [shoredate](https://github.com/isakro/shoredate)
 - [interpolate_curve.R](https://github.com/isakro/shoredate/blob/master/R/interpolate_curve.R)
-- [Reading list](../reading.qmd)

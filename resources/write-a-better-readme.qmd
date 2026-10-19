@@ -17,4 +17,3 @@ A README is a plaintext file that includes a detailed description of a project. 
 ## Further reading
 
 - [Make a README](https://www.makeareadme.com/)
-- [Reading list](../reading.qmd)
