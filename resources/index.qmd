@@ -15,7 +15,7 @@ listing:
   fields: [title, description, categories]
 ---
 
-Guides for cleaning, documenting and revisiting older code and data.
+Guides for cleaning, documenting, or revisiting older code and data.
 
 ```{=html}
 <script>

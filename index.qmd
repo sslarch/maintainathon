@@ -1,7 +1,7 @@
 ---
 title: |
   Digital Archaeology Maintainathon\
-subtitle: "Let's clean, document and revisit older code and data, together!"
+subtitle: "Let's clean, document, or revisit older code and data, together!"
 # description: "#DigiArchMaintainathon"
 ---
 
