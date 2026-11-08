@@ -1,0 +1,46 @@
+// Guide styles
+
+.quarto-title { display: flex; flex-direction: column; }
+.quarto-title .quarto-categories {
+  order: -1;
+  margin: 0 0 14px;
+  padding: 0;
+}
+.quarto-title .quarto-categories .quarto-category {
+  border: 0 !important;
+  padding: 0 !important;
+  background: none !important;
+  font-family: $font-label;
+  font-size: 13px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: $muted;
+}
+
+// Readable line length for guide text
+#quarto-document-content:has(.quarto-category) > :not(.quarto-title-block):not(.callout) { max-width: 780px; }
+
+// Collapsible notes read like the rest of the page
+main .callout {
+  max-width: 780px;
+  margin: 28px 0;
+  border: 0 !important;
+  border-left: 3px solid $line !important;
+  border-radius: 0;
+  background: transparent !important;
+  box-shadow: none;
+}
+main .callout.callout-style-simple .callout-body,
+main .callout.callout-style-simple .callout-body-container {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+main .callout .callout-title-container {
+  font-family: $font-family-sans-serif;
+  font-size: 1rem;
+  font-weight: 600;
+  color: $ink !important;
+}
+main .callout .callout-header,
+main .callout.callout-style-simple .callout-header { padding: 6px 0 6px 16px; background: transparent !important; }
+main .callout .callout-body { padding-left: 16px; }

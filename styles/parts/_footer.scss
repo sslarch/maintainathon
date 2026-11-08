@@ -1,0 +1,15 @@
+// Footer styles
+
+html { background: $card; }
+body { min-height: 100vh; display: flex; flex-direction: column; }
+#quarto-content { flex: 1 0 auto; }
+.nav-footer {
+  border-top: 1px solid $line;
+  background: $card;
+  font-size: 14px;
+  color: $muted;
+  padding: 28px 24px;
+}
+.nav-footer .nav-footer-left, .nav-footer .nav-footer-right { color: $muted; }
+.nav-footer a { color: $muted; }
+.nav-footer .nav-footer-center { flex: 1 1 100%; max-width: none; margin: 0; text-align: center; }
