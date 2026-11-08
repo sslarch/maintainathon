@@ -1,0 +1,25 @@
+[
+  {
+    "listing": "/resources/index.html",
+    "items": [
+      "/resources/set-up-continuous-integration.html",
+      "/resources/acknowledge-contributors.html",
+      "/resources/add-a-citation-file.html",
+      "/resources/add-a-license.html",
+      "/resources/archive-your-code.html",
+      "/resources/comment-your-code.html",
+      "/resources/develop-a-project-roadmap.html",
+      "/resources/develop-a-release-strategy.html",
+      "/resources/donate-to-foss-projects.html",
+      "/resources/list-your-project-in-a-registry.html",
+      "/resources/open-issues.html",
+      "/resources/optimize-speed-and-efficiency.html",
+      "/resources/perform-a-code-review.html",
+      "/resources/post-a-code-of-conduct.html",
+      "/resources/test-your-code.html",
+      "/resources/write-a-better-readme.html",
+      "/resources/write-comprehensive-documentation.html",
+      "/resources/write-contributor-guidelines.html"
+    ]
+  }
+]
