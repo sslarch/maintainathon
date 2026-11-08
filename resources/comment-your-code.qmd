@@ -16,11 +16,13 @@ Some qualities of good code comments include:
 
 Here is a great write-up about how to write effective code comments: [How to Write Professional Code Comments: A Beginner's Guide to Better Code Documentation (dev.to)](https://dev.to/anurag_dev/how-to-write-professional-code-comments-a-beginners-guide-to-better-code-documentation-27hf)
 
-Here's a great example of code comments in action, adapted from the [interpolate_curve.R](https://github.com/isakro/shoredate/blob/master/R/interpolate_curve.R) function in Isak Roalkvam's [shoredate](https://github.com/isakro/shoredate) package:
 
-:::{.callout-note collapse="true" appearance="minimal"}
+## Example
 
-## Code comments example
+Here's a great example of code comments in action, adapted from the [interpolate_curve.R](https://github.com/isakro/shoredate/blob/master/R/interpolate_curve.R) function in Isak Roalkvam's [shoredate](https://github.com/isakro/shoredate) package.
+
+Note the use of (1) general comments outlining the script's overall purpose and scope at the top of the document, and (2) more specific comments describing the rationale behind each step in the process.
+
 
 ```r
 # Interpolate displacement curve to a target location within the spatial
@@ -160,7 +162,6 @@ interpolate_curve <- function(target,
 }
 ```
 
-:::
 
 ## Further reading
 

@@ -29,3 +29,4 @@ date-released: 2024-08-24
 ## Further reading
 
 - [Citation File Format](https://citation-file-format.github.io/)
+- Percopackage's CFF: <https://github.com/SCSchmidt/percopackage/blob/master/CITATION.cff>

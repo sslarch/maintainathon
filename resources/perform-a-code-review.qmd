@@ -10,6 +10,8 @@ The [Journal of Open Source Software](https://joss.theoj.org/about) is one such 
 
 This journal also published [Recommendations for the review of archaeological research software](https://doi.org/10.11588/ai.2020.1.81423), which might help you think of questions to ask yourself in regards to the software you are reviewing. Smaller reviews may also be a good topic for a blog or a social media post. Such appraisals are very valuable for researchers looking for the best solution to their problem!
 
+<!-- TODO: Link to new resource, or integrate content about writing about or comparing software. -->
+
 ## Further reading
 
 - [Journal of Open Source Software](https://joss.theoj.org/about)

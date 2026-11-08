@@ -20,9 +20,6 @@ Be sure to also check the resources about [Continuous Integration](https://md.ar
 
 Adding more tests is a great thing to do in a maintainathon! We invite you to follow this great example:
 
-
-:::{.callout-note collapse="true" appearance="minimal"}
-
 ## How to write unit tests
 
 1. Take one function or method from a script, a package, a software that you produced.
@@ -67,8 +64,6 @@ test_that("revolutionary_new_mean handles non-numeric vectors", {
 ```
 
 Done! We now wrote two *unit tests* (even though one of them will fail miserably).
-
-:::
 
 ## Further reading
 

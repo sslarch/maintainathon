@@ -8,10 +8,9 @@ In some situations you might want more comprehensive documentation than can be p
 This can for example be in the form of manual pages for individual function that state what a given function does, the input it requires, what parameters can be adjusted, and the kind of data it returns.
 It can also be in the form of more expansive documents, for example to lay out a workflow in more detail or to present more specialized use-cases than that which is covered in the more general README. 
 
-Below follows outlines for how this can be done in Python and R, respectively:
+See the examples below for how to do this in either Python or R.
 
-<details>
-<summary> Comprehensive documentation in Python</summary>
+## Comprehensive documentation in Python
 
 When a README file is not enough, or if you want to host your code documentation on a separate website, you can use a _documentation generator_ such as [Sphinx](https://www.sphinx-doc.org/en/master/index.html). Sphinx is a tool that generates a series of HTML files (or PDF) starting from a directory containing reStructuredText or Markdown files.
 
@@ -37,10 +36,7 @@ With Sphinx autodoc set up, the multiline comment would be pulled into an "API r
 
 Because the Sphinx documentation needs to be rebuilt after each change, it's a good idea to automatize the process through the usage of Github Actions or other CI tools.
 
-</details>
-
-<details>
-<summary> Comprehensive documentation in R </summary>
+## Comprehensive documentation in R
 
 The framework of a package offers a natural structure to draw on if you want to provide more comprehensive documentation for a project based in R.
 While packages are most commonly encountered in the form of software extensions that you can install locally to gain access to extended functionality, this framework also forms the foundation of what ([Marwick et al. (2018](https://doi.org/10.1080/00031305.2017.1375986); [Marwick 2017](https://doi.org/10.1007/s10816-015-9272-9)) term a research compendium.
@@ -121,8 +117,6 @@ Finally the documentation provides two examples of how the function can be used.
 After the roxygen2 documentation you can see the function definition itself in code form.
 A comment has also been added here (using the standard `#` symbol for defining comments in R) to indicate that you can (and should) still comment specific lines of code, even though this will not be visible on the manual page.
 You can compare this outline of a roxygen2 documentation to the manual page for `?seriate_average` to get a sense of how the different fields end up being formatted. 
-
-</details>
 
 ## Further reading
 

@@ -12,6 +12,8 @@ There are [numerous schemes](https://nesbitt.io/2024/06/24/from-zerover-to-semve
 - [Alternative Versioning (AltVer)](https://altver.org/): Tracks implementation of major overhauls, new features, and careful maintenance.
 - [Calendar Versioning (CalVer)](https://calver.org/): For "rolling" releases that follow a regular maintenance cycle.
 
+<!-- TODO: Show examples of what these release numbering schemes look like. -->
+
 ## Further reading
 
 - [Semantic Versioning](https://semver.org/)
