@@ -361,18 +361,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <p>Continuous integration (CI) refers to the process of automating tasks pertaining to the integration of changes and new features into existing software. The automatization process can be setup for different tasks such as building a software, testing, generating documentation, or producing accessible outputs deriving from the codebase. One notable aspect of CI is that they can be triggered by changes in the codebase, which can effectively automate one’s testing environment and documentation-writing processes, ensuring robust software development.</p>
 <p>There are several CI tools that can be used, one of the most accessible is Github Actions (but do check out GitLab CI if you work on Gitlab). CI pipelines can also be run locally, specifically to deal with tasks that depend on several pieces of code that are connected in complicated ways. We’ve written a brief introduction to GitHub Actions to help get you started:</p>
-<div class="callout callout-style-simple callout-note no-icon callout-titled">
-<div class="callout-header d-flex align-content-center collapsed" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
-<div class="callout-icon-container">
-<i class="callout-icon no-icon"></i>
-</div>
-<div class="callout-title-container flex-fill">
-<span class="screen-reader-only">Note</span>Using Github Actions
-</div>
-<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
-</div>
-<div id="callout-1" class="callout-1-contents callout-collapse collapse">
-<div class="callout-body-container callout-body">
+<section id="using-github-actions" class="level2">
+<h2 class="anchored" data-anchor-id="using-github-actions">Using Github Actions</h2>
 <p>Github Actions come in different flavors and can do many different things: for example, if you have setup a website using Github Pages, Github runs actions “under the hood” to build the website after each change committed. But Github Actions can be set-up for our own projects too. There is a whole <a href="https://github.com/marketplace?type=actions">marketplace</a> of actions to choose from.</p>
 <p>By setting up the correct Github Action (or whatever other tool you are using – here we stick with the Github example for clarity), a series of steps is executed everytime the code is pushed to a Github repository. In case of steps that might break something, it is also possible to create Github Actions when a branch is merged, and this can be paired with <a href="https://docs.github.com/en/repositories/configuring-branches-and-merges-in-your-repository/managing-protected-branches/managing-a-branch-protection-rule">branch protection rules</a> to stop merges that would break the code.</p>
 <p>To set up an automatic Github action, one needs to go in the repository of the project and click on Actions, then click on “New Workflow”.</p>
@@ -469,14 +459,22 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">github_token</span><span class="kw">:</span><span class="at"> ${{ secrets.GITHUB_TOKEN }}</span></span>
 <span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">publish_dir</span><span class="kw">:</span><span class="at"> build/</span></span>
 <span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a><span class="at">          </span><span class="fu">force_orphan</span><span class="kw">:</span><span class="at"> </span><span class="ch">true</span></span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</div>
-</div>
+</section>
+<section id="using-ci-to-orchestrate-interaction-in-a-codebase" class="level2">
+<h2 class="anchored" data-anchor-id="using-ci-to-orchestrate-interaction-in-a-codebase">Using CI to orchestrate interaction in a codebase</h2>
 <p>Additionally, CI is useful for orchestrating the interaction of different pieces of a codebase. This supports the superior practice of writing different pieces of code dealing with different functions, rather than writing one large program that calls different functions in sequence. Imagine, for example, that you have an analysis composed of different steps, each steps producing the input for the next step. In certain situations you will want all steps to run in sequence, but in other situations you would like only certain steps to run (e.g.&nbsp;because other steps have been run previously and need no re-running). Make ensures that each component operates in a manner that corresponds with your instructions.</p>
 <p>This is typically accomplishing using GNU <a href="https://www.gnu.org/software/make/">Make</a>, a tool that controls how a software will run from a series of source code files. To do this, one can use a <a href="https://makefiletutorial.com/"><code>makefile</code></a>, a file that dictates how different pieces of a pipeline interact. While Make is typically operating on languages that need building (think C and C++), other languages have their own tools doing the same thing, such as Snakemake (for Python) and the library <a href="https://cran.r-project.org/web/packages/MakefileR/vignettes/An_Introduction_to_MakefileR.html">MakefileR</a> (for R).</p>
 <p>For a distinctively archaeological perspective, consider reading Clemens Schmidt’s <a href="https://nevrome.de/blog/posts/2021-12-05-shake-I.html">reflection</a> on <a href="https://nevrome.de/blog/posts/2021-12-05-shake-II.html">his use</a> of Haskell’s version of Make (Shake) for his archaeoinformatics research.</p>
+</section>
+<section id="further-reading" class="level2">
+<h2 class="anchored" data-anchor-id="further-reading">Further reading</h2>
+<ul>
+<li><a href="https://nevrome.de/blog/posts/2021-12-05-shake-I.html">Workflow management with Haskell Shake I: Discovery</a></li>
+<li><a href="https://nevrome.de/blog/posts/2021-12-05-shake-II.html">Workflow management with Haskell Shake II: Showcase</a></li>
+</ul>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
