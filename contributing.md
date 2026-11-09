@@ -68,7 +68,7 @@ Delete a page by deleting its file. Then search the repository for the file name
 
 ## Reading list entries
 
-Each entry is one JSON file in `reading/entries/`. When the site builds, it reads every file in that folder, sorts the entries by theme, first author and date, and generates the Abstract, BibLaTeX and Cite buttons for each one. You never edit `reading.qmd` or `reading/list.lua` to add an entry.
+Each entry is one JSON file in `reading/entries/`. When the site builds, it reads every file in that folder, sorts the entries by theme, first author and date, and generates the Abstract, BibLaTeX and Cite buttons for each one. You never edit `reading/index.qmd` or `reading/list.lua` to add an entry.
 
 ### Add an entry
 
@@ -157,7 +157,7 @@ When an entry has a problem, the build stops and names the file, as in `wilson20
 
 ## Style preferences
 
-These are preferences, not rules. They are meant to help pages and entries read as one collection.
+These are preferences, not rules. They help pages and entries read as one collection.
 
 - Write headings in sentence case.
 - Write in plain, direct language, address the reader as "you", and use the imperative for steps.

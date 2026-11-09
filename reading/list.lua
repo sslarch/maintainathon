@@ -1,5 +1,5 @@
 -- Builds the reading list from reading/themes.json and reading/entries/*.json at render time.
--- reading.qmd lists this file under `filters` and holds a Div with id "reading-list-here",
+-- reading/index.qmd lists this file under `filters` and holds a Div with id "reading-list-here",
 -- which this filter replaces with the generated HTML.
 
 local here = (PANDOC_SCRIPT_FILE or ""):match("^(.*)[/\\][^/\\]*$") or "."

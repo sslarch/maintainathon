@@ -2,7 +2,7 @@
 title: "Reading list"
 description: "Readings on research software engineering, archaeological software development, and the culture and history of free and open source software."
 filters:
-  - reading/list.lua
+  - list.lua
 ---
 
 ::: {#reading-list-here}
