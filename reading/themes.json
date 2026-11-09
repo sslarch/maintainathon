@@ -1,0 +1,5 @@
+[
+  {"id": "rse", "label": "Research software engineering", "color": "#2B6C8F"},
+  {"id": "arch", "label": "Archaeological software development", "color": "#C2693A"},
+  {"id": "foss", "label": "Culture and history of FOSS", "color": "#7A5C9E"}
+]

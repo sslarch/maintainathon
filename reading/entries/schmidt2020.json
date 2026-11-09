@@ -1,0 +1,12 @@
+{
+  "entrytype": "article",
+  "author": "Schmidt, S. C. and Marwick, B.",
+  "title": "Tool-driven revolutions in archaeological science",
+  "journaltitle": "Journal of Computer Applications in Archaeology",
+  "date": "2020",
+  "volume": "3",
+  "number": "1",
+  "doi": "10.5334/jcaa.29",
+  "keywords": "Archaeological software development",
+  "abstract": "There is an argument in philosophy of science that revolutions in science are either idea-driven or tool-driven. We explore this debate in light of recent efforts by many scientific disciplines to embrace methods to improve the reproducibility of their research. One of the most profound changes driven by this concern for reproducibility and transparency is from analysing data using tools dependent on point-and-clicking with a mouse in closed source software, to tools based on writing scripts in open source programming languages and making them openly available. We present bibliometric evidence for this change in ecology and in archaeology to test if the adoption of these new tools is revolutionary or transformational. We identify a positive citation effect for papers that use the open source programming language R. We discuss how computational approaches to improving reproducibility and transparency in archaeology are mediated and transformed by the use of R code."
+}

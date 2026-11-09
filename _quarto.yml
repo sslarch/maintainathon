@@ -1,8 +1,5 @@
 project:
   type: website
-  resources:
-    - references.bib
-  title: BibVik
   preview:
     port: 7777
     browser: false

@@ -1,0 +1,12 @@
+{
+  "entrytype": "article",
+  "author": "Taschuk, M. and Wilson, G.",
+  "title": "Ten simple rules for making research software more robust",
+  "journaltitle": "PLOS Computational Biology",
+  "date": "2017",
+  "volume": "13",
+  "number": "4",
+  "doi": "10.1371/journal.pcbi.1005412",
+  "keywords": "Research software engineering",
+  "abstract": "Software produced for research, published and otherwise, suffers from a number of common problems that make it difficult or impossible to run outside the original institution or even off the primary developer's computer. We present ten simple rules to make such software robust enough to be run by anyone, anywhere, and thereby delight your users and collaborators."
+}

@@ -1,0 +1,10 @@
+{
+  "entrytype": "article",
+  "author": "Homburg, T. and others",
+  "title": "Recommendations for the review of archaeological research software",
+  "journaltitle": "Archäologische Informationen",
+  "date": "2021",
+  "doi": "10.11588/AI.2020.1.81423",
+  "keywords": "Archaeological software development",
+  "abstract": "Motivated by numerous discussions around the increasing use of research software in the field of archaeology, this article outlines some aspects for its review. The evaluation of software is a complex topic, since its field of application and development context has a considerable influence. In addition, there are many very different use cases, ranging from students wanting a quick solution for an exercise to project developers, who have to integrate a software package into an existing infrastructure for continuous operation. Although this discussion paper is based on equal contributions from archaeology and applied computer science, the focus is on evaluation criteria for software in the field of archaeology. A major goal of this paper is to alert future reviewers to the complexity of software evaluation. A software review should enable a professional archaeological audience to make a quick, critical and fair, to both the product and the developers assessment of the software. Priority recommendations include a description of the context in which the review was written and the requirements for specific use cases. In addition, a short tabular overview should enable a quick assessment of the technical, financial and legal aspects. The need for future adaptations of this guideline was identified at the outset since both software development and its evaluation in the digital age are expected to remain very dynamic."
+}
