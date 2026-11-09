@@ -1,12 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sslarch.github.io/maintainathon/resources.html</loc>
-    <lastmod>2026-01-12T13:43:58.384Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sslarch.github.io/maintainathon/reading.html</loc>
-    <lastmod>2026-11-09T15:23:38.833Z</lastmod>
+    <loc>https://sslarch.github.io/maintainathon/contributing.html</loc>
+    <lastmod>2026-11-09T16:20:25.675Z</lastmod>
   </url>
   <url>
     <loc>https://sslarch.github.io/maintainathon/2026-recap.html</loc>
@@ -53,6 +49,10 @@
     <lastmod>2026-01-08T19:38:55.122Z</lastmod>
   </url>
   <url>
+    <loc>https://sslarch.github.io/maintainathon/reading/index.html</loc>
+    <lastmod>2026-11-09T16:22:27.050Z</lastmod>
+  </url>
+  <url>
     <loc>https://sslarch.github.io/maintainathon/resources/acknowledge-contributors.html</loc>
     <lastmod>2026-10-19T19:11:33.000Z</lastmod>
   </url>
@@ -95,9 +95,5 @@
   <url>
     <loc>https://sslarch.github.io/maintainathon/index.html</loc>
     <lastmod>2026-11-08T20:05:01.477Z</lastmod>
-  </url>
-  <url>
-    <loc>https://sslarch.github.io/maintainathon/contributing.html</loc>
-    <lastmod>2026-11-09T16:02:10.399Z</lastmod>
   </url>
 </urlset>
