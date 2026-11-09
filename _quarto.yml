@@ -14,7 +14,7 @@ website:
 
   page-footer:
     center: |
-      [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) | 
+      [Contribute](/contributing.md) | [CC0 1.0 Universal](https://creativecommons.org/publicdomain/zero/1.0/) | 
       This page is built with ❤️ and [Quarto](https://quarto.org/), with theme from [vetiver](https://github.com/rstudio/vetiver.rstudio.com)
   search: false
   navbar:
@@ -52,5 +52,3 @@ format:
     link-external-newwindow: true
     page-layout: full
     number-sections: false
-      
-
