@@ -1,6 +1,8 @@
 ---
 title: |
-  Digital Archaeology Maintainathon\
+  [January 18-22, 2027]{.event-dates}\
+  Digital Archaeology Maintainathon
+pagetitle: "Digital Archaeology Maintainathon"
 subtitle: "Let's clean, document, or revisit older code and data, together!"
 # description: "#DigiArchMaintainathon"
 ---

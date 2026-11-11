@@ -9,10 +9,11 @@ h1.title {
   letter-spacing: -0.01em;
   margin: 0;
 }
-.quarto-title-block .description, .quarto-title .subtitle { color: $muted; font-size: 21px; line-height: 1.5; margin: 18px 0 0; opacity: 1; }
+.quarto-title-block .description, .quarto-title .subtitle { color: $muted; font-size: 21px; line-height: 1.5; margin: 8px 0 0; opacity: 1; }
 .quarto-title-meta-heading, .quarto-title-meta-contents { font-family: $font-label; font-size: 13px; }
 
-#title-block-header .description, #title-block-header .subtitle { margin-top: 18px !important; }
+#title-block-header .description, #title-block-header .subtitle { margin-top: 8px !important; }
+#title-block-header:has(.subtitle) { padding-bottom: 0; margin-bottom: 0; margin-block-end: 0; }
 h1.title { margin-bottom: 0; }
 
 main h2 {
@@ -49,4 +50,13 @@ pre.sourceCode { padding: 20px; }
   padding: 0.1em 0.35em;
   border-radius: 4px;
   font-size: 0.9em;
+}
+
+.event-dates {
+  color: $accent;
+  display: inline-block;
+  margin-bottom: 20px;
+  font-size: 36px;
+  line-height: 1.2;
+  font-weight: 700;
 }
